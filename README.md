@@ -35,6 +35,31 @@ Tailwind se extiende con tokens personalizados (`dark-bg`, `card-bg`, `text-acce
 
 Se utiliza ESLint en modo flat config (`eslint.config.mjs`). Para evitar sorpresas, el comando `npm run lint` falla ante cualquier warning.
 
+## CI/CD
+
+El proyecto incluye un pipeline de GitHub Actions que ejecuta:
+
+- **Tests**: Jest con React Testing Library
+- **Linting**: ESLint con reglas estrictas
+- **Formateo**: Prettier para consistencia de código
+- **Build**: Verificación de compilación exitosa
+- **Deploy**: Despliegue automático a Vercel en pushes a `main`
+
+### Configuración de Secrets (GitHub)
+
+Para el despliegue automático, configura estos secrets en tu repositorio:
+
+1. Ve a **Settings > Secrets and variables > Actions**
+2. Agrega los siguientes secrets:
+   - `VERCEL_TOKEN`: Tu token de Vercel (obtenlo en https://vercel.com/account/tokens)
+   - `VERCEL_ORG_ID`: ID de tu organización en Vercel
+   - `VERCEL_PROJECT_ID`: ID del proyecto en Vercel
+
+### Flujo de trabajo
+
+- **Push/PR a main/develop**: Ejecuta tests, linting y build
+- **Push a main**: Despliega automáticamente a producción
+
 ## Licencia
 
 Proyecto privado: revisa las condiciones internas antes de compartir código o contenido.

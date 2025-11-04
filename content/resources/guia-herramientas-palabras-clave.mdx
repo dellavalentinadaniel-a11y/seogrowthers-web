@@ -1,0 +1,101 @@
+---
+title: 'Guía Definitiva de Herramientas para Descubrir Palabras Clave'
+description: 'Domina el arte del Keyword Research con las mejores herramientas y un proceso paso a paso para encontrar oportunidades y superar a tu competencia.'
+date: '2025-10-07'
+---
+
+import { ToolGrid } from '@/components/mdx/ToolGrid';
+import { ToolCard } from '@/components/mdx/ToolCard';
+import { StepItem } from '@/components/mdx/StepItem';
+import { TipCard } from '@/components/mdx/TipCard';
+
+<header className="text-center mb-16">
+    <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
+        Guía Definitiva de Herramientas para <span className="gradient-text">Descubrir Palabras Clave</span>
+    </h1>
+    <p className="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">Domina el arte del Keyword Research con las mejores herramientas y un proceso paso a paso para encontrar oportunidades y superar a tu competencia.</p>
+</header>
+
+<section className="mb-20">
+    <h2 className="text-3xl font-bold text-white flex items-center mb-8"><i className="fas fa-tools mr-3 text-blue-400"></i>1. Herramientas para Descubrir Palabras Clave</h2>
+    
+    <h3 className="text-2xl font-semibold text-white mb-6">Herramientas Gratuitas</h3>
+    <ToolGrid>
+        <ToolCard header={<><i className="fab fa-google text-green-400"></i> Google Keyword Planner</>} href="#">
+            Volumen de búsqueda, tendencias y datos directos de Google. Ideal para obtener un gran volumen de ideas.
+        </ToolCard>
+        <ToolCard header={<><i className="fas fa-question-circle text-green-400"></i> AnswerThePublic</>} href="#">
+            Visualiza preguntas y preposiciones que la gente busca. Perfecto para encontrar ideas de contenido long-tail.
+        </ToolCard>
+        <ToolCard header={<><i className="fas fa-search text-green-400"></i> Google Suggest</>} href="#">
+            Las sugerencias del autocompletar de Google. Ideal para encontrar variaciones y términos populares rápidamente.
+        </ToolCard>
+    </ToolGrid>
+
+    <h3 className="text-2xl font-semibold text-white mt-12 mb-6">Herramientas de Pago (Recomendadas)</h3>
+    <ToolGrid>
+        <ToolCard header={<><i className="fas fa-rocket text-purple-400"></i> Semrush</>} href="https://semrush.com">
+            Un "todo en uno" para análisis de keywords, competidores y auditorías. La más completa para profesionales.
+        </ToolCard>
+        <ToolCard header={<><i className="fas fa-anchor text-purple-400"></i> Ahrefs</>} href="https://ahrefs.com">
+            Base de datos masiva de keywords y backlinks. Excelente para análisis profundos y nichos competidos.
+        </ToolCard>
+        <ToolCard header={<><i className="fab fa-moz text-purple-400"></i> Moz Keyword Explorer</>} href="https://moz.com/explorer">
+            Interfaz simple y métricas fáciles de entender como el "Difficulty Score". Ideal para principiantes en herramientas de pago.
+        </ToolCard>
+    </ToolGrid>
+</section>
+
+<section className="mb-20">
+    <h2 className="text-3xl font-bold text-white flex items-center mb-8"><i className="fas fa-cogs mr-3 text-blue-400"></i>2. Cómo Usar las Herramientas: Guía Paso a Paso</h2>
+    <div className="space-y-6">
+        <StepItem stepNumber={1} title='Define tu "Palabra Clave Semilla"'>
+            <p>Es el término principal que define tu negocio o tema. Ej: "marketing digital", "recetas saludables".</p>
+        </StepItem>
+        <StepItem stepNumber={2} title="Recopila Ideas Masivamente">
+            <p>Usa las herramientas para introducir tu semilla y anota todas las sugerencias en una hoja de cálculo.</p>
+        </StepItem>
+        <StepItem stepNumber={3} title="Analiza y Filtra las Palabras Clave">
+            <p>Evalúa cada palabra clave por volumen, dificultad SEO y, lo más importante, <strong>intención de búsqueda</strong>.</p>
+            <div className="bg-gray-900 border border-gray-700 rounded-md p-4 mt-4">
+                <h4 className="font-semibold text-white">Tipos de Intención:</h4>
+                <ul className="text-sm text-gray-400 list-disc list-inside mt-2">
+                    <li><strong>Informativa:</strong> Quiere aprender ("cómo hacer pan").</li>
+                    <li><strong>Comercial:</strong> Investiga para comprar ("mejores laptops 2024").</li>
+                    <li><strong>Transaccional:</strong> Quiere comprar ahora ("comprar iPhone 15").</li>
+                </ul>
+            </div>
+        </StepItem>
+        <StepItem stepNumber={4} title="Agrupa por Temas (Clustering)">
+            <p>No escribas un artículo por cada keyword. Agrupa términos relacionados en un "tema" para crear contenido pilar y demostrar autoridad.</p>
+        </StepItem>
+        <StepItem stepNumber={5} title="Implementa y Monitoriza">
+            <p>Usa la palabra clave principal en lugares estratégicos (título, URL, H1) y las relacionadas en el resto del contenido. Monitorea tu rendimiento con Google Search Console.</p>
+        </StepItem>
+    </div>
+</section>
+
+<section className="mb-20">
+    <h2 className="text-3xl font-bold text-white flex items-center mb-8"><i className="fas fa-lightbulb mr-3 text-blue-400"></i>3. Consejos Clave para una Estrategia Exitosa</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <TipCard icon="fas fa-bullseye" title="Prioriza la Intención sobre el Volumen">
+            Es mejor rankear #1 para 100 búsquedas relevantes que #10 para 10,000 irrelevantes.
+        </TipCard>
+        <TipCard icon="fas fa-filter" title='Caza "Long-Tail Keywords"'>
+            Frases más largas y específicas tienen menos competencia y atraen tráfico más cualificado.
+        </TipCard>
+        <TipCard icon="fas fa-binoculars" title="Analiza a tu Competencia">
+            Usa Semrush/Ahrefs para ver por qué keywords rankean tus competidores y encuentra oportunidades.
+        </TipCard>
+        <TipCard icon="fas fa-microphone-alt" title="No ignores la Búsqueda por Voz">
+            Piensa en preguntas completas y naturales. AnswerThePublic es ideal para esto.
+        </TipCard>
+    </div>
+</section>
+
+<section>
+     <div className="bg-gray-800 border border-blue-500 rounded-lg p-8 text-center">
+        <h2 className="text-2xl font-bold text-white mb-4">Resumen Ejecutivo para el Éxito</h2>
+        <p className="text-gray-400 max-w-2xl mx-auto">Empieza con herramientas gratuitas. Define la <strong>intención de búsqueda</strong> como tu criterio principal. Enfócate en <strong>palabras clave de cola larga</strong> con baja dificultad. Agrupa tus keywords por temas. Crea el <strong>mejor contenido</strong> posible. Y finalmente, usa <strong>Google Search Console</strong> para aprender y refinar.</p>
+    </div>
+</section>

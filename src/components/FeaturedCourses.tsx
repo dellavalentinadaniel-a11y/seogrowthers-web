@@ -6,9 +6,9 @@ interface FeaturedCoursesProps {
 }
 
 const levelColors: Record<Course['level'], string> = {
-  'Básico': 'bg-emerald-500/15 text-emerald-200',
-  'Intermedio': 'bg-amber-500/15 text-amber-200',
-  'Avanzado': 'bg-rose-500/15 text-rose-200',
+  Básico: 'bg-emerald-500/15 text-emerald-200',
+  Intermedio: 'bg-amber-500/15 text-amber-200',
+  Avanzado: 'bg-rose-500/15 text-rose-200',
 };
 
 export default function FeaturedCourses({ courses }: FeaturedCoursesProps) {
@@ -19,10 +19,11 @@ export default function FeaturedCourses({ courses }: FeaturedCoursesProps) {
           Cursos destacados
         </h2>
         <p className="mt-2 text-text-muted">
-          Diseñados para construir, validar y escalar productos digitales paso a paso.
+          Diseñados para construir, validar y escalar productos digitales paso a
+          paso.
         </p>
         <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {courses.map((course) => (
+          {courses.map(course => (
             <Link
               key={course.id}
               href={`/cursos/${course.slug}`}
@@ -30,10 +31,14 @@ export default function FeaturedCourses({ courses }: FeaturedCoursesProps) {
             >
               <div className="flex flex-grow flex-col gap-4 p-6">
                 <div className="flex items-start justify-between">
-                  <span className={`rounded-full px-3 py-1 text-xs font-semibold ${levelColors[course.level]}`}>
+                  <span
+                    className={`rounded-full px-3 py-1 text-xs font-semibold ${levelColors[course.level]}`}
+                  >
                     {course.level}
                   </span>
-                  <span className="text-xs text-text-muted">{course.duration}</span>
+                  <span className="text-xs text-text-muted">
+                    {course.duration}
+                  </span>
                 </div>
                 <div className="flex items-center gap-3">
                   {course.icon && (
@@ -49,13 +54,18 @@ export default function FeaturedCourses({ courses }: FeaturedCoursesProps) {
                   {course.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {course.tags.map((tag) => (
-                    <span key={tag} className="rounded-full bg-black/40 px-3 py-1 text-xs text-text-muted">
+                  {course.tags.map(tag => (
+                    <span
+                      key={tag}
+                      className="rounded-full bg-black/40 px-3 py-1 text-xs text-text-muted"
+                    >
                       #{tag}
                     </span>
                   ))}
                 </div>
-                <span className="text-sm font-semibold text-text-accent">Ver curso →</span>
+                <span className="text-sm font-semibold text-text-accent">
+                  Ver curso →
+                </span>
               </div>
             </Link>
           ))}

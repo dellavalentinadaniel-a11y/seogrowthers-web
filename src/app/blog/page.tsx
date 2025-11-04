@@ -8,12 +8,15 @@ export default function BlogPage() {
     <main className="bg-dark-bg text-text-light">
       <section className="container mx-auto max-w-7xl px-6 py-16 sm:px-8">
         <header className="mx-auto max-w-2xl text-center">
-          <p className="text-sm uppercase tracking-[0.3em] text-text-muted">Blog</p>
+          <p className="text-sm uppercase tracking-[0.3em] text-text-muted">
+            Blog
+          </p>
           <h1 className="mt-4 text-4xl font-extrabold text-white md:text-5xl">
             Ideas accionables para crecer en digital
           </h1>
           <p className="mt-4 text-lg text-text-muted">
-            SEO técnico, marketing de producto y desarrollo web: descubre nuestros últimos análisis y guías prácticas.
+            SEO técnico, marketing de producto y desarrollo web: descubre
+            nuestros últimos análisis y guías prácticas.
           </p>
         </header>
 
@@ -23,7 +26,8 @@ export default function BlogPage() {
           </div>
         ) : (
           <p className="mt-12 text-center text-text-muted">
-            Estamos preparando nuevos artículos. Vuelve pronto para descubrir las novedades.
+            Estamos preparando nuevos artículos. Vuelve pronto para descubrir
+            las novedades.
           </p>
         )}
       </section>

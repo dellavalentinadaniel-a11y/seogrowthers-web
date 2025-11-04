@@ -16,18 +16,18 @@ Tanto desarrolladores como marketers dependen de herramientas eficientes para op
 
 ## Herramientas para Desarrolladores
 
-*   **VS Code:** Editor de código ligero y potente.
-*   **Git/GitHub:** Control de versiones y colaboración.
-*   **Docker:** Contenedorización de aplicaciones.
-*   **Postman/Insomnia:** Pruebas de APIs.
-*   **Next.js/React:** Frameworks para desarrollo frontend.
+- **VS Code:** Editor de código ligero y potente.
+- **Git/GitHub:** Control de versiones y colaboración.
+- **Docker:** Contenedorización de aplicaciones.
+- **Postman/Insomnia:** Pruebas de APIs.
+- **Next.js/React:** Frameworks para desarrollo frontend.
 
 ## Herramientas para Marketers
 
-*   **Google Analytics:** Análisis de tráfico web.
-*   **Google Search Console:** Monitoreo de SEO.
-*   **SEMrush/Ahrefs:** Investigación de palabras clave y análisis de competencia.
-*   **Mailchimp/Sendinblue:** Email marketing.
-*   **Canva:** Diseño gráfico sencillo.
+- **Google Analytics:** Análisis de tráfico web.
+- **Google Search Console:** Monitoreo de SEO.
+- **SEMrush/Ahrefs:** Investigación de palabras clave y análisis de competencia.
+- **Mailchimp/Sendinblue:** Email marketing.
+- **Canva:** Diseño gráfico sencillo.
 
 ¡Equípate con las mejores herramientas y lleva tu trabajo al siguiente nivel!

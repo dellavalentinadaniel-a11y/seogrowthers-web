@@ -16,7 +16,11 @@ interface BlogPostDetailProps {
   suggestedPosts?: SuggestedPost[];
 }
 
-export default function BlogPostDetail({ frontmatter, content, suggestedPosts = [] }: BlogPostDetailProps) {
+export default function BlogPostDetail({
+  frontmatter,
+  content,
+  suggestedPosts = [],
+}: BlogPostDetailProps) {
   const { title, date, author, tags } = frontmatter;
 
   return (
@@ -35,10 +39,15 @@ export default function BlogPostDetail({ frontmatter, content, suggestedPosts = 
             <p className="text-sm text-text-muted">
               {date} · {author}
             </p>
-            <h1 className="mt-2 text-4xl font-extrabold text-white md:text-5xl">{title}</h1>
+            <h1 className="mt-2 text-4xl font-extrabold text-white md:text-5xl">
+              {title}
+            </h1>
             <div className="mt-4 flex flex-wrap gap-2">
-              {tags.map((tag) => (
-                <span key={tag} className="rounded-full bg-black/40 px-3 py-1 text-xs text-text-muted">
+              {tags.map(tag => (
+                <span
+                  key={tag}
+                  className="rounded-full bg-black/40 px-3 py-1 text-xs text-text-muted"
+                >
                   #{tag}
                 </span>
               ))}
@@ -55,9 +64,12 @@ export default function BlogPostDetail({ frontmatter, content, suggestedPosts = 
         </article>
 
         <aside className="mt-12 rounded-2xl border border-card-bg bg-card-bg/80 p-6 text-center shadow-lg shadow-black/20">
-          <h2 className="text-xl font-semibold text-white">Lleva tus conocimientos al siguiente nivel</h2>
+          <h2 className="text-xl font-semibold text-white">
+            Lleva tus conocimientos al siguiente nivel
+          </h2>
           <p className="mt-2 text-sm text-text-muted">
-            Si te gustó este contenido, explora las rutas de aprendizaje y cursos enfocados en resultados.
+            Si te gustó este contenido, explora las rutas de aprendizaje y
+            cursos enfocados en resultados.
           </p>
           <Link
             href="/cursos"
@@ -69,16 +81,22 @@ export default function BlogPostDetail({ frontmatter, content, suggestedPosts = 
 
         {suggestedPosts.length > 0 && (
           <section className="mt-12 rounded-2xl border border-card-bg bg-card-bg/80 p-6 shadow-lg shadow-black/20">
-            <h3 className="text-2xl font-semibold text-white">También te puede interesar</h3>
+            <h3 className="text-2xl font-semibold text-white">
+              También te puede interesar
+            </h3>
             <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
-              {suggestedPosts.map((post) => (
+              {suggestedPosts.map(post => (
                 <Link
                   key={post.id}
                   href={`/blog/${post.slug}`}
                   className="group flex h-full flex-col rounded-xl border border-text-muted/20 bg-black/30 p-5 transition hover:border-text-accent/40"
                 >
-                  <h4 className="text-lg font-semibold text-white group-hover:text-text-accent">{post.title}</h4>
-                  <p className="mt-3 text-sm text-text-muted line-clamp-3">{post.description}</p>
+                  <h4 className="text-lg font-semibold text-white group-hover:text-text-accent">
+                    {post.title}
+                  </h4>
+                  <p className="mt-3 text-sm text-text-muted line-clamp-3">
+                    {post.description}
+                  </p>
                 </Link>
               ))}
             </div>

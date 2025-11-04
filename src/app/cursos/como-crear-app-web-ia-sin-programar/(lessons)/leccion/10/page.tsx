@@ -9,7 +9,8 @@ const lessonId = '10';
 const quizQuestions = [
   {
     id: 'q1',
-    prompt: '1. ¿Qué plugin de Bubble es esencial para comunicarnos con nuestro webhook de Make?',
+    prompt:
+      '1. ¿Qué plugin de Bubble es esencial para comunicarnos con nuestro webhook de Make?',
     options: [
       { id: 'a', label: 'API Connector' },
       { id: 'b', label: 'HTML Viewer' },
@@ -19,7 +20,8 @@ const quizQuestions = [
   },
   {
     id: 'q2',
-    prompt: '2. En Bubble, una secuencia de acciones que se inicia por un evento (como un clic) se llama...',
+    prompt:
+      '2. En Bubble, una secuencia de acciones que se inicia por un evento (como un clic) se llama...',
     options: [
       { id: 'a', label: 'Element' },
       { id: 'b', label: 'Custom State' },
@@ -29,9 +31,14 @@ const quizQuestions = [
   },
   {
     id: 'q3',
-    prompt: '3. Para mostrar la respuesta de IA que recibimos de Make, utilizamos...',
+    prompt:
+      '3. Para mostrar la respuesta de IA que recibimos de Make, utilizamos...',
     options: [
-      { id: 'a', label: '"Set state" para almacenar temporalmente la respuesta y desplegarla.' },
+      {
+        id: 'a',
+        label:
+          '"Set state" para almacenar temporalmente la respuesta y desplegarla.',
+      },
       { id: 'b', label: '"User login" para autenticar la respuesta.' },
       { id: 'c', label: '"Refresh page" para recargar toda la página.' },
     ],
@@ -48,7 +55,8 @@ export default async function Lesson10Page() {
 
   const currentLesson = Number(lessonId);
   const prevLesson = currentLesson - 1;
-  const nextLesson = currentLesson + 1 <= lesson.totalLessons ? currentLesson + 1 : null;
+  const nextLesson =
+    currentLesson + 1 <= lesson.totalLessons ? currentLesson + 1 : null;
 
   return (
     <>
@@ -59,7 +67,11 @@ export default async function Lesson10Page() {
         questions={quizQuestions}
         successMessage="¡Integración completa! Estamos listos para la conexión final."
       />
-      <LessonNavigation courseSlug={courseSlug} prevLessonId={prevLesson} nextLessonId={nextLesson} />
+      <LessonNavigation
+        courseSlug={courseSlug}
+        prevLessonId={prevLesson}
+        nextLessonId={nextLesson}
+      />
     </>
   );
 }

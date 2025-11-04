@@ -15,13 +15,18 @@ export default async function Lesson3Page() {
 
   const currentLesson = Number(lessonId);
   const prevLesson = currentLesson - 1;
-  const nextLesson = currentLesson + 1 <= lesson.totalLessons ? currentLesson + 1 : null;
+  const nextLesson =
+    currentLesson + 1 <= lesson.totalLessons ? currentLesson + 1 : null;
 
   return (
     <>
       <div dangerouslySetInnerHTML={{ __html: lesson.content }} />
       <PreparationChecklist />
-      <LessonNavigation courseSlug={courseSlug} prevLessonId={prevLesson} nextLessonId={nextLesson} />
+      <LessonNavigation
+        courseSlug={courseSlug}
+        prevLessonId={prevLesson}
+        nextLessonId={nextLesson}
+      />
     </>
   );
 }

@@ -6,12 +6,15 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 interface BlogPostPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: BlogPostPageProps): Promise<Metadata> {
+  const { slug } = await params;
   try {
-    const { frontmatter } = await getBlogPostBySlug(params.slug);
+    const { frontmatter } = await getBlogPostBySlug(slug);
 
     return {
       title: frontmatter.title,
@@ -42,7 +45,8 @@ export async function generateStaticParams() {
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = await getBlogPostBySlug(params.slug).catch(() => null);
+  const { slug } = await params;
+  const post = await getBlogPostBySlug(slug).catch(() => null);
 
   if (!post) {
     notFound();

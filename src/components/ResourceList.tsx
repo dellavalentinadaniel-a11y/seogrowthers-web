@@ -50,10 +50,15 @@ export default function ResourceList({ resources }: ResourceListProps) {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const filters = useMemo(() => {
-    const categories = Array.from(new Set(resources.map((item) => item.category)));
+    const categories = Array.from(
+      new Set(resources.map(item => item.category))
+    );
     return [
       { id: 'all', label: 'Todos' },
-      ...categories.map((category) => ({ id: toSlug(category), label: category })),
+      ...categories.map(category => ({
+        id: toSlug(category),
+        label: category,
+      })),
     ];
   }, [resources]);
 
@@ -61,13 +66,15 @@ export default function ResourceList({ resources }: ResourceListProps) {
     if (activeFilter === 'all') {
       return resources;
     }
-    return resources.filter((resource) => toSlug(resource.category) === activeFilter);
+    return resources.filter(
+      resource => toSlug(resource.category) === activeFilter
+    );
   }, [activeFilter, resources]);
 
   return (
     <>
       <div className="flex flex-wrap justify-center gap-3 mb-12">
-        {filters.map((filter) => {
+        {filters.map(filter => {
           const isActive = activeFilter === filter.id;
           return (
             <button
@@ -86,8 +93,11 @@ export default function ResourceList({ resources }: ResourceListProps) {
         })}
       </div>
 
-      <div id="resources-grid" className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {filteredResources.map((resource) => {
+      <div
+        id="resources-grid"
+        className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+      >
+        {filteredResources.map(resource => {
           const typeInfo = typeMap[resource.type];
           return (
             <Link
@@ -97,19 +107,30 @@ export default function ResourceList({ resources }: ResourceListProps) {
             >
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <p className={`text-xs font-semibold uppercase tracking-wide ${typeInfo.accentClass}`}>
+                  <p
+                    className={`text-xs font-semibold uppercase tracking-wide ${typeInfo.accentClass}`}
+                  >
                     {resource.type}
                   </p>
-                  <h3 className="mt-2 text-xl font-bold text-white">{resource.title}</h3>
+                  <h3 className="mt-2 text-xl font-bold text-white">
+                    {resource.title}
+                  </h3>
                 </div>
-                <div className={`flex h-12 w-12 items-center justify-center rounded-lg ${typeInfo.badgeClass}`}>
+                <div
+                  className={`flex h-12 w-12 items-center justify-center rounded-lg ${typeInfo.badgeClass}`}
+                >
                   <i className={`${typeInfo.icon} text-lg`} />
                 </div>
               </div>
-              <p className="my-4 flex-grow text-sm text-text-muted">{resource.description}</p>
+              <p className="my-4 flex-grow text-sm text-text-muted">
+                {resource.description}
+              </p>
               <div className="flex flex-wrap gap-2">
-                {resource.tags.map((tag) => (
-                  <span key={tag} className="rounded-full bg-black/40 px-2.5 py-1 text-xs text-text-muted">
+                {resource.tags.map(tag => (
+                  <span
+                    key={tag}
+                    className="rounded-full bg-black/40 px-2.5 py-1 text-xs text-text-muted"
+                  >
                     {tag}
                   </span>
                 ))}

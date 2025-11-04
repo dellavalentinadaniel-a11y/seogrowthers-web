@@ -27,7 +27,7 @@ const coursesDirectory = path.join(process.cwd(), 'content/courses');
  */
 export function getCourses(): Omit<Course, 'content'>[] {
   const fileNames = fs.readdirSync(coursesDirectory);
-  const allCoursesData = fileNames.map((fileName) => {
+  const allCoursesData = fileNames.map(fileName => {
     const slug = fileName.replace(/\.md$/, '');
     const fullPath = path.join(coursesDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
@@ -98,8 +98,11 @@ export async function getLessonContent(slug: string, lessonId: string) {
   const { content } = matter(fileContents);
 
   // Dividir el contenido por lecciones (usando '---' como separador en el MD)
-  const lessons = content.split('---').map(s => s.trim()).filter(Boolean);
-  
+  const lessons = content
+    .split('---')
+    .map(s => s.trim())
+    .filter(Boolean);
+
   // El ID de la lección es 1-based, el índice del array es 0-based
   const lessonIndex = parseInt(lessonId, 10) - 1;
 
@@ -110,9 +113,7 @@ export async function getLessonContent(slug: string, lessonId: string) {
   const lessonMarkdown = lessons[lessonIndex];
 
   // Convierte el contenido de la lección de Markdown a HTML
-  const processedContent = await remark()
-    .use(html)
-    .process(lessonMarkdown);
+  const processedContent = await remark().use(html).process(lessonMarkdown);
   const contentHtml = processedContent.toString();
 
   return {

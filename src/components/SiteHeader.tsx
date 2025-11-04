@@ -31,16 +31,19 @@ export default function SiteHeader() {
           type="button"
           className="md:hidden text-text-light"
           aria-label="Abrir menú"
-          onClick={() => setOpen((prev) => !prev)}
+          onClick={() => setOpen(prev => !prev)}
         >
           <i className={`fas ${open ? 'fa-times' : 'fa-bars'} text-xl`} />
         </button>
 
         <nav className="hidden md:block">
           <ul className="flex items-center gap-6 text-sm text-text-muted">
-            {navigation.map((item) => (
+            {navigation.map(item => (
               <li key={item.href}>
-                <Link href={item.href} className="transition hover:text-text-accent">
+                <Link
+                  href={item.href}
+                  className="transition hover:text-text-accent"
+                >
                   {item.label}
                 </Link>
               </li>
@@ -55,7 +58,7 @@ export default function SiteHeader() {
             <SearchBar />
           </div>
           <ul className="mt-6 space-y-3 text-sm text-text-muted">
-            {navigation.map((item) => (
+            {navigation.map(item => (
               <li key={item.href}>
                 <Link
                   href={item.href}

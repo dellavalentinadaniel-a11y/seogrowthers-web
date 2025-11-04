@@ -9,7 +9,10 @@ export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const consent = typeof window !== 'undefined' ? localStorage.getItem(STORAGE_KEY) : 'true';
+    const consent =
+      typeof window !== 'undefined'
+        ? localStorage.getItem(STORAGE_KEY)
+        : 'true';
     if (!consent) {
       setVisible(true);
     }
@@ -29,7 +32,10 @@ export default function CookieBanner() {
       <div className="container mx-auto flex flex-col gap-4 px-6 py-5 text-sm text-text-muted md:flex-row md:items-center md:justify-between">
         <p>
           Usamos cookies para mejorar tu experiencia. Consulta nuestra{' '}
-          <Link href="/politica-de-cookies" className="text-text-accent hover:underline">
+          <Link
+            href="/politica-de-cookies"
+            className="text-text-accent hover:underline"
+          >
             política de cookies
           </Link>
           .

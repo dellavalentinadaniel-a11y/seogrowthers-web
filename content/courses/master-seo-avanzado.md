@@ -15,11 +15,11 @@ Este master está diseñado para profesionales que buscan llevar sus habilidades
 
 ## Temas Clave:
 
-*   Auditoría SEO Técnica Profunda
-*   Estrategias de Link Building Avanzadas
-*   SEO para E-commerce y Negocios Locales
-*   Análisis de Datos y Herramientas SEO
-*   Creación de Contenido Estratégico
+- Auditoría SEO Técnica Profunda
+- Estrategias de Link Building Avanzadas
+- SEO para E-commerce y Negocios Locales
+- Análisis de Datos y Herramientas SEO
+- Creación de Contenido Estratégico
 
 ### Certificación:
 

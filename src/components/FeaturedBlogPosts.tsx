@@ -14,10 +14,11 @@ export default function FeaturedBlogPosts({ posts }: FeaturedBlogPostsProps) {
           Últimos artículos del blog
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-text-muted">
-          Historias reales, frameworks accionables y aprendizajes listos para aplicar en tus proyectos digitales.
+          Historias reales, frameworks accionables y aprendizajes listos para
+          aplicar en tus proyectos digitales.
         </p>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post) => (
+          {posts.map(post => (
             <Link
               href={`/blog/${post.slug}`}
               key={post.slug}
@@ -42,9 +43,15 @@ export default function FeaturedBlogPosts({ posts }: FeaturedBlogPostsProps) {
                 <div className="text-xs uppercase tracking-[0.2em] text-text-muted">
                   {post.date}
                 </div>
-                <h3 className="text-xl font-semibold text-white group-hover:text-text-accent">{post.title}</h3>
-                <p className="flex-grow text-sm text-text-muted line-clamp-3">{post.description}</p>
-                <span className="text-sm font-semibold text-text-accent">Leer más →</span>
+                <h3 className="text-xl font-semibold text-white group-hover:text-text-accent">
+                  {post.title}
+                </h3>
+                <p className="flex-grow text-sm text-text-muted line-clamp-3">
+                  {post.description}
+                </p>
+                <span className="text-sm font-semibold text-text-accent">
+                  Leer más →
+                </span>
               </div>
             </Link>
           ))}

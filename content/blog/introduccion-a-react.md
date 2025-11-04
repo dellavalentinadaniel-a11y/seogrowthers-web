@@ -16,9 +16,9 @@ React es una librería de JavaScript para construir interfaces de usuario intera
 
 ## ¿Qué hace a React tan popular?
 
-*   **Componentes:** Permite construir UIs complejas a partir de pequeñas piezas de código reutilizables.
-*   **Virtual DOM:** Optimiza el rendimiento al actualizar solo las partes de la UI que han cambiado.
-*   **Declarativo:** Describe cómo debe verse la UI en cualquier estado, y React se encarga de actualizarla.
+- **Componentes:** Permite construir UIs complejas a partir de pequeñas piezas de código reutilizables.
+- **Virtual DOM:** Optimiza el rendimiento al actualizar solo las partes de la UI que han cambiado.
+- **Declarativo:** Describe cómo debe verse la UI en cualquier estado, y React se encarga de actualizarla.
 
 ## Tu primer componente React
 

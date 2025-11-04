@@ -1,6 +1,6 @@
-'use client'
+'use client';
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo } from 'react';
 
 export function PromptLab() {
   const [promptParts, setPromptParts] = useState({
@@ -8,40 +8,50 @@ export function PromptLab() {
     contexto: '',
     instruccion: '',
     formato: '',
-  })
+  });
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setPromptParts(prev => ({ ...prev, [name]: value }))
-  }
+    const { name, value } = e.target;
+    setPromptParts(prev => ({ ...prev, [name]: value }));
+  };
 
   const finalPrompt = useMemo(() => {
-    const { rol, contexto, instruccion, formato } = promptParts
+    const { rol, contexto, instruccion, formato } = promptParts;
     // Only include parts that are not empty
     const parts = [
       rol ? `[Rol] ${rol}` : '',
       contexto ? `[Contexto] ${contexto}` : '',
       instruccion ? `[Instrucción] ${instruccion}` : '',
       formato ? `[Formato] ${formato}` : '',
-    ]
+    ];
     return parts.filter(Boolean).join('\n');
-  }, [promptParts])
+  }, [promptParts]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(finalPrompt);
     alert('¡Prompt Maestro copiado al portapapeles!');
-  }
+  };
 
   return (
     <div className="not-prose my-12 rounded-2xl border border-card-bg bg-card-bg/80 p-6 text-text-light shadow-lg shadow-black/20 md:p-8">
-      <h3 className="text-2xl font-semibold text-white">🔬 Laboratorio de prompts</h3>
-      <p className="mt-2 text-text-muted">Completa los cuatro pilares para construir el prompt maestro de “TweetSpark”.</p>
+      <h3 className="text-2xl font-semibold text-white">
+        🔬 Laboratorio de prompts
+      </h3>
+      <p className="mt-2 text-text-muted">
+        Completa los cuatro pilares para construir el prompt maestro de
+        “TweetSpark”.
+      </p>
 
       <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2">
         {/* Input Fields */}
         <div className="space-y-6">
           <div>
-            <label htmlFor="rol" className="mb-2 block text-lg font-semibold text-white">1. Rol</label>
+            <label
+              htmlFor="rol"
+              className="mb-2 block text-lg font-semibold text-white"
+            >
+              1. Rol
+            </label>
             <textarea
               id="rol"
               name="rol"
@@ -53,7 +63,12 @@ export function PromptLab() {
             />
           </div>
           <div>
-            <label htmlFor="contexto" className="mb-2 block text-lg font-semibold text-white">2. Contexto</label>
+            <label
+              htmlFor="contexto"
+              className="mb-2 block text-lg font-semibold text-white"
+            >
+              2. Contexto
+            </label>
             <textarea
               id="contexto"
               name="contexto"
@@ -65,7 +80,12 @@ export function PromptLab() {
             />
           </div>
           <div>
-            <label htmlFor="instruccion" className="mb-2 block text-lg font-semibold text-white">3. Instrucción</label>
+            <label
+              htmlFor="instruccion"
+              className="mb-2 block text-lg font-semibold text-white"
+            >
+              3. Instrucción
+            </label>
             <textarea
               id="instruccion"
               name="instruccion"
@@ -77,7 +97,12 @@ export function PromptLab() {
             />
           </div>
           <div>
-            <label htmlFor="formato" className="mb-2 block text-lg font-semibold text-white">4. Formato</label>
+            <label
+              htmlFor="formato"
+              className="mb-2 block text-lg font-semibold text-white"
+            >
+              4. Formato
+            </label>
             <textarea
               id="formato"
               name="formato"
@@ -92,9 +117,15 @@ export function PromptLab() {
 
         {/* Real-time Preview */}
         <div className="h-full">
-          <label className="mb-2 block text-lg font-semibold text-white">Prompt maestro (vista previa)</label>
+          <label className="mb-2 block text-lg font-semibold text-white">
+            Prompt maestro (vista previa)
+          </label>
           <div className="min-h-[300px] w-full whitespace-pre-wrap rounded-xl border border-text-muted/30 bg-black/40 p-4 font-mono text-sm text-text-light">
-            {finalPrompt || <span className="text-text-muted">A medida que completes los campos, el prompt aparecerá aquí…</span>}
+            {finalPrompt || (
+              <span className="text-text-muted">
+                A medida que completes los campos, el prompt aparecerá aquí…
+              </span>
+            )}
           </div>
           {finalPrompt && (
             <button
@@ -107,5 +138,5 @@ export function PromptLab() {
         </div>
       </div>
     </div>
-  )
+  );
 }

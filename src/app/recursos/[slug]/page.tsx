@@ -1,5 +1,5 @@
-import { fetchResourceBySlug } from "@/lib/api";
-import { notFound } from "next/navigation";
+import { fetchResourceBySlug } from '@/lib/api';
+import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { compileMDX } from 'next-mdx-remote/rsc';
 import fs from 'fs';
@@ -15,7 +15,7 @@ import { TipCard } from '@/components/mdx/TipCard';
 import InteractiveSeoChecklist from '@/components/InteractiveSeoChecklist';
 
 interface ResourcePageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 // This object maps component names (as used in MDX) to the actual imported components.
@@ -29,27 +29,36 @@ const components = {
   InteractiveSeoChecklist,
 };
 
-export async function generateMetadata({ params }: ResourcePageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: ResourcePageProps): Promise<Metadata> {
+  const { slug } = await params;
   try {
-    const resource = await fetchResourceBySlug(params.slug);
+    const resource = await fetchResourceBySlug(slug);
     if (!resource) {
-      return { title: "Recurso no encontrado" };
+      return { title: 'Recurso no encontrado' };
     }
     return { title: resource.title, description: resource.description };
   } catch {
-    return { title: "Recurso no encontrado" };
+    return { title: 'Recurso no encontrado' };
   }
 }
 
 export default async function ResourcePage({ params }: ResourcePageProps) {
-  const resource = await fetchResourceBySlug(params.slug);
+  const { slug } = await params;
+  const resource = await fetchResourceBySlug(slug);
 
   if (!resource) {
     notFound();
   }
 
   // Path to the MDX file
-  const filePath = path.join(process.cwd(), 'content', 'resources', `${params.slug}.mdx`);
+  const filePath = path.join(
+    process.cwd(),
+    'content',
+    'resources',
+    `${slug}.mdx`
+  );
 
   let mdxSource;
   try {
@@ -58,11 +67,13 @@ export default async function ResourcePage({ params }: ResourcePageProps) {
     // If the MDX file doesn't exist, we can show a simpler page or an error.
     // For now, we'll fall back to a simple display.
     return (
-        <div className="container mx-auto p-8 text-white">
-            <h1 className="text-4xl font-bold mb-8">{resource.title}</h1>
-            <p>{resource.description}</p>
-            <p className="mt-4"><i>Contenido en construcción.</i></p>
-        </div>
+      <div className="container mx-auto p-8 text-white">
+        <h1 className="text-4xl font-bold mb-8">{resource.title}</h1>
+        <p>{resource.description}</p>
+        <p className="mt-4">
+          <i>Contenido en construcción.</i>
+        </p>
+      </div>
     );
   }
 

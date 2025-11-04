@@ -24,14 +24,21 @@ type TocItem = {
 
 const HEADING_SELECTOR = 'article h2, article h3';
 
-export default function BlogArticle({ post, allPosts, allCourses, allResources }: BlogArticleProps) {
+export default function BlogArticle({
+  post,
+  allPosts,
+  allCourses,
+  allResources,
+}: BlogArticleProps) {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [tocItems, setTocItems] = useState<TocItem[]>([]);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = document.documentElement.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
       const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
       setScrollProgress(progress);
     };
@@ -42,10 +49,12 @@ export default function BlogArticle({ post, allPosts, allCourses, allResources }
   }, []);
 
   useEffect(() => {
-    const headingNodes = Array.from(document.querySelectorAll<HTMLElement>(HEADING_SELECTOR));
+    const headingNodes = Array.from(
+      document.querySelectorAll<HTMLElement>(HEADING_SELECTOR)
+    );
     const mapped = headingNodes
-      .filter((node) => node.id)
-      .map<TocItem>((node) => ({
+      .filter(node => node.id)
+      .map<TocItem>(node => ({
         id: node.id,
         text: node.textContent ?? '',
         level: Number(node.tagName.replace('H', '')),
@@ -53,7 +62,10 @@ export default function BlogArticle({ post, allPosts, allCourses, allResources }
     setTocItems(mapped);
   }, [post.slug]);
 
-  const articleSummary: BlogPostSummary = { slug: post.slug, ...post.frontmatter };
+  const articleSummary: BlogPostSummary = {
+    slug: post.slug,
+    ...post.frontmatter,
+  };
 
   return (
     <div className="bg-dark-bg text-text-light">
@@ -66,16 +78,26 @@ export default function BlogArticle({ post, allPosts, allCourses, allResources }
       <main className="container mx-auto max-w-5xl px-6 py-16">
         <article className="rounded-2xl border border-card-bg bg-card-bg/80 p-8 shadow-lg shadow-black/20 md:p-12">
           <header className="mb-10">
-            <p className="text-sm uppercase tracking-[0.3em] text-text-muted">Blog</p>
-            <h1 className="mt-3 text-4xl font-extrabold text-white md:text-5xl">{post.frontmatter.title}</h1>
+            <p className="text-sm uppercase tracking-[0.3em] text-text-muted">
+              Blog
+            </p>
+            <h1 className="mt-3 text-4xl font-extrabold text-white md:text-5xl">
+              {post.frontmatter.title}
+            </h1>
             <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-text-muted">
               <span>{post.frontmatter.date}</span>
-              <span className="h-1 w-1 rounded-full bg-text-muted/60" aria-hidden />
+              <span
+                className="h-1 w-1 rounded-full bg-text-muted/60"
+                aria-hidden
+              />
               <span>{post.frontmatter.author}</span>
             </div>
             <div className="mt-4 flex flex-wrap gap-2">
-              {post.frontmatter.tags.map((tag) => (
-                <span key={tag} className="rounded-full border border-text-muted/30 px-3 py-1 text-xs text-text-muted">
+              {post.frontmatter.tags.map(tag => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-text-muted/30 px-3 py-1 text-xs text-text-muted"
+                >
                   #{tag}
                 </span>
               ))}
@@ -89,10 +111,12 @@ export default function BlogArticle({ post, allPosts, allCourses, allResources }
             >
               <h2 className="text-lg font-semibold text-white">Contenido</h2>
               <ol className="mt-4 space-y-2 text-sm text-text-muted">
-                {tocItems.map((item) => (
+                {tocItems.map(item => (
                   <li
                     key={item.id}
-                    style={{ marginLeft: `${Math.max(0, item.level - 2) * 1.5}rem` }}
+                    style={{
+                      marginLeft: `${Math.max(0, item.level - 2) * 1.5}rem`,
+                    }}
                   >
                     <a href={`#${item.id}`} className="hover:text-text-accent">
                       {item.text}

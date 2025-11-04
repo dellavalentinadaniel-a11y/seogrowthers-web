@@ -7,7 +7,12 @@ interface LessonNavigationProps {
   nextLabel?: string;
 }
 
-export function LessonNavigation({ courseSlug, prevLessonId, nextLessonId, nextLabel = 'Siguiente lección' }: LessonNavigationProps) {
+export function LessonNavigation({
+  courseSlug,
+  prevLessonId,
+  nextLessonId,
+  nextLabel = 'Siguiente lección',
+}: LessonNavigationProps) {
   return (
     <div className="not-prose mt-12 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
       {prevLessonId && prevLessonId > 0 ? (
@@ -18,7 +23,9 @@ export function LessonNavigation({ courseSlug, prevLessonId, nextLessonId, nextL
           &larr; Lección anterior
         </Link>
       ) : (
-        <span className="inline-flex h-10 items-center text-sm text-text-muted/60">Inicio del curso</span>
+        <span className="inline-flex h-10 items-center text-sm text-text-muted/60">
+          Inicio del curso
+        </span>
       )}
 
       {nextLessonId ? (

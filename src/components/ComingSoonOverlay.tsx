@@ -4,9 +4,12 @@ const ComingSoonOverlay = () => (
       <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-text-accent/20 text-text-accent">
         <i className="fas fa-rocket text-2xl" aria-hidden />
       </div>
-      <h2 className="mt-6 text-4xl font-extrabold text-white">¡Próximamente!</h2>
+      <h2 className="mt-6 text-4xl font-extrabold text-white">
+        ¡Próximamente!
+      </h2>
       <p className="mt-3 text-sm text-text-muted">
-        Estamos preparando una comunidad enfocada en proyectos reales, retos colaborativos y mentorías en vivo.
+        Estamos preparando una comunidad enfocada en proyectos reales, retos
+        colaborativos y mentorías en vivo.
       </p>
       <p className="mt-4 text-xs uppercase tracking-[0.4em] text-text-muted">
         Mantente atento a las novedades

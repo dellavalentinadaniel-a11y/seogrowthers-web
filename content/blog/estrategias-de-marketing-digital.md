@@ -17,12 +17,12 @@ El marketing digital es un campo vasto y en constante evolución. Para tener éx
 
 ## Componentes de una Estrategia Digital
 
-*   **SEO (Search Engine Optimization):** Para mejorar la visibilidad orgánica.
-*   **SEM (Search Engine Marketing):** Publicidad de pago en buscadores (Google Ads).
-*   **Marketing de Contenidos:** Creación y distribución de contenido valioso.
-*   **Redes Sociales:** Interacción y construcción de comunidad.
-*   **Email Marketing:** Comunicación directa con tu audiencia.
-*   **Analítica Web:** Medición y optimización de resultados.
+- **SEO (Search Engine Optimization):** Para mejorar la visibilidad orgánica.
+- **SEM (Search Engine Marketing):** Publicidad de pago en buscadores (Google Ads).
+- **Marketing de Contenidos:** Creación y distribución de contenido valioso.
+- **Redes Sociales:** Interacción y construcción de comunidad.
+- **Email Marketing:** Comunicación directa con tu audiencia.
+- **Analítica Web:** Medición y optimización de resultados.
 
 ## Pasos para crear tu estrategia
 

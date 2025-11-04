@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 const socialLinks = [
   { icon: 'fab fa-facebook', label: 'Facebook', href: '#' },
   { icon: 'fab fa-twitter', label: 'Twitter', href: '#' },
@@ -33,10 +31,15 @@ export default function ContactoPage() {
     <main className="bg-dark-bg text-text-light">
       <section className="container mx-auto max-w-6xl px-6 py-16">
         <header className="mx-auto max-w-3xl text-center">
-          <p className="text-sm uppercase tracking-[0.3em] text-text-muted">Contacto</p>
-          <h1 className="mt-4 text-4xl font-extrabold text-white md:text-5xl">¿Listo para conversar?</h1>
+          <p className="text-sm uppercase tracking-[0.3em] text-text-muted">
+            Contacto
+          </p>
+          <h1 className="mt-4 text-4xl font-extrabold text-white md:text-5xl">
+            ¿Listo para conversar?
+          </h1>
           <p className="mt-4 text-lg text-text-muted">
-            Completa el formulario o escríbenos a través de nuestros canales directos. Respondemos en menos de 48 horas hábiles.
+            Completa el formulario o escríbenos a través de nuestros canales
+            directos. Respondemos en menos de 48 horas hábiles.
           </p>
         </header>
 
@@ -44,7 +47,10 @@ export default function ContactoPage() {
           <form className="rounded-2xl border border-card-bg bg-card-bg/80 p-8 shadow-lg shadow-black/20 space-y-6">
             <div className="grid gap-6 md:grid-cols-2">
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-white">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-semibold text-white"
+                >
                   Nombre
                 </label>
                 <input
@@ -56,7 +62,10 @@ export default function ContactoPage() {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-white">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-semibold text-white"
+                >
                   Email
                 </label>
                 <input
@@ -69,7 +78,10 @@ export default function ContactoPage() {
               </div>
             </div>
             <div>
-              <label htmlFor="subject" className="block text-sm font-semibold text-white">
+              <label
+                htmlFor="subject"
+                className="block text-sm font-semibold text-white"
+              >
                 Asunto
               </label>
               <input
@@ -81,7 +93,10 @@ export default function ContactoPage() {
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-semibold text-white">
+              <label
+                htmlFor="message"
+                className="block text-sm font-semibold text-white"
+              >
                 Mensaje
               </label>
               <textarea
@@ -99,45 +114,56 @@ export default function ContactoPage() {
               Enviar mensaje
             </button>
             <p className="text-xs text-text-muted">
-              Al enviar tus datos aceptas nuestra política de privacidad. No enviamos spam ni compartimos tu información.
+              Al enviar tus datos aceptas nuestra política de privacidad. No
+              enviamos spam ni compartimos tu información.
             </p>
           </form>
 
           <div className="space-y-8">
             <section className="rounded-2xl border border-card-bg bg-card-bg/80 p-8 shadow-lg shadow-black/20">
-              <h2 className="text-xl font-semibold text-white">Nuestra información</h2>
+              <h2 className="text-xl font-semibold text-white">
+                Nuestra información
+              </h2>
               <ul className="mt-5 space-y-4 text-sm text-text-muted">
                 {contactDetails.map(({ label, value, href, note }) => (
                   <li key={label}>
                     <p className="text-text-light">{label}</p>
                     {href ? (
-                      <a href={href} className="mt-1 inline-block text-text-accent hover:underline">
+                      <a
+                        href={href}
+                        className="mt-1 inline-block text-text-accent hover:underline"
+                      >
                         {value}
                       </a>
                     ) : (
                       <p className="mt-1">{value}</p>
                     )}
-                    {note && <p className="text-xs text-text-muted/70">{note}</p>}
+                    {note && (
+                      <p className="text-xs text-text-muted/70">{note}</p>
+                    )}
                   </li>
                 ))}
               </ul>
             </section>
 
             <section className="rounded-2xl border border-card-bg bg-card-bg/80 p-8 shadow-lg shadow-black/20">
-              <h2 className="text-xl font-semibold text-white">Síguenos en redes</h2>
+              <h2 className="text-xl font-semibold text-white">
+                Síguenos en redes
+              </h2>
               <p className="mt-2 text-sm text-text-muted">
-                Compartimos recursos gratuitos, oportunidades y casos de estudio.
+                Compartimos recursos gratuitos, oportunidades y casos de
+                estudio.
               </p>
               <div className="mt-6 flex gap-4">
-                {socialLinks.map((social) => (
-                  <Link
+                {socialLinks.map(social => (
+                  <a
                     key={social.label}
                     href={social.href}
                     aria-label={social.label}
                     className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-text-muted/30 text-text-muted transition hover:border-text-accent/40 hover:text-text-accent"
                   >
                     <i className={`${social.icon} text-lg`} />
-                  </Link>
+                  </a>
                 ))}
               </div>
             </section>

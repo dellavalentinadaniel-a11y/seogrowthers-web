@@ -10,13 +10,19 @@ export default function CourseDetail({ course }: CourseDetailProps) {
       <header className="space-y-3">
         <h1 className="text-4xl font-bold text-white">{course.title}</h1>
         <p className="text-sm text-text-muted">
-          Instructor: <span className="font-semibold text-text-light">{course.instructor}</span> · Duración: {course.duration} · Nivel:{' '}
-          {course.level}
+          Instructor:{' '}
+          <span className="font-semibold text-text-light">
+            {course.instructor}
+          </span>{' '}
+          · Duración: {course.duration} · Nivel: {course.level}
         </p>
         <p className="text-text-light/80">{course.description}</p>
         <div className="flex flex-wrap gap-2 pt-2">
-          {course.tags.map((tag) => (
-            <span key={tag} className="rounded-full bg-black/40 px-3 py-1 text-xs text-text-muted">
+          {course.tags.map(tag => (
+            <span
+              key={tag}
+              className="rounded-full bg-black/40 px-3 py-1 text-xs text-text-muted"
+            >
               {tag}
             </span>
           ))}

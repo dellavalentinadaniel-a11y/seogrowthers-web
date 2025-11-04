@@ -15,11 +15,11 @@ Este curso te guiará a través de los conceptos esenciales del desarrollo web m
 
 ## Módulos del Curso:
 
-*   Introducción a HTML, CSS y JavaScript
-*   Fundamentos de React
-*   Construyendo con Next.js (App Router)
-*   Estilizando con Tailwind CSS
-*   Despliegue y Optimización
+- Introducción a HTML, CSS y JavaScript
+- Fundamentos de React
+- Construyendo con Next.js (App Router)
+- Estilizando con Tailwind CSS
+- Despliegue y Optimización
 
 ### Proyecto Final:
 

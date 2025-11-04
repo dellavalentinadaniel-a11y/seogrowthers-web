@@ -1,32 +1,34 @@
 const highlights = [
   {
     title: 'Nuestra Misión',
-    copy:
-      'Empoderar a desarrolladores, emprendedores y entusiastas del marketing digital con herramientas prácticas, contenido accionable y acompañamiento constante para que puedan construir, lanzar y hacer crecer proyectos digitales sostenibles.',
+    copy: 'Empoderar a desarrolladores, emprendedores y entusiastas del marketing digital con herramientas prácticas, contenido accionable y acompañamiento constante para que puedan construir, lanzar y hacer crecer proyectos digitales sostenibles.',
   },
   {
     title: 'Nuestra Visión',
-    copy:
-      'Convertirnos en la plataforma de referencia para quienes desean dominar la intersección entre desarrollo web y marketing digital, integrando recursos, mini-proyectos y formación continua en un mismo espacio.',
+    copy: 'Convertirnos en la plataforma de referencia para quienes desean dominar la intersección entre desarrollo web y marketing digital, integrando recursos, mini-proyectos y formación continua en un mismo espacio.',
   },
 ];
 
 const philosophy = [
   {
     label: 'Aprender haciendo',
-    detail: 'Diseñamos experiencias centradas en la práctica y en resultados tangibles.',
+    detail:
+      'Diseñamos experiencias centradas en la práctica y en resultados tangibles.',
   },
   {
     label: 'Calidad curada',
-    detail: 'Publicamos guías, talleres y recursos revisados y actualizados de forma periódica.',
+    detail:
+      'Publicamos guías, talleres y recursos revisados y actualizados de forma periódica.',
   },
   {
     label: 'Comunidad',
-    detail: 'Fomentamos la colaboración entre perfiles técnicos y estratégicos para acelerar el aprendizaje.',
+    detail:
+      'Fomentamos la colaboración entre perfiles técnicos y estratégicos para acelerar el aprendizaje.',
   },
   {
     label: 'Innovación continua',
-    detail: 'Experimentamos con nuevas tecnologías, frameworks y metodologías para mantenernos relevantes.',
+    detail:
+      'Experimentamos con nuevas tecnologías, frameworks y metodologías para mantenernos relevantes.',
   },
 ];
 
@@ -41,7 +43,8 @@ export default function SobreMiPage() {
           Construimos en comunidad para crecer en digital
         </h1>
         <p className="mt-4 text-lg text-text-muted">
-          SEOGROWTHERS reúne estrategia, tecnología y contenidos educativos para ayudarte a lanzar productos digitales con impacto.
+          SEOGROWTHERS reúne estrategia, tecnología y contenidos educativos para
+          ayudarte a lanzar productos digitales con impacto.
         </p>
       </header>
 
@@ -61,8 +64,13 @@ export default function SobreMiPage() {
         <h2 className="text-3xl font-semibold text-white">Nuestra filosofía</h2>
         <ul className="mt-6 space-y-4">
           {philosophy.map(({ label, detail }) => (
-            <li key={label} className="rounded-lg border border-card-bg bg-black/30 p-4">
-              <h3 className="text-lg font-semibold text-text-accent">{label}</h3>
+            <li
+              key={label}
+              className="rounded-lg border border-card-bg bg-black/30 p-4"
+            >
+              <h3 className="text-lg font-semibold text-text-accent">
+                {label}
+              </h3>
               <p className="mt-2 text-text-muted">{detail}</p>
             </li>
           ))}

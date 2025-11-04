@@ -34,24 +34,23 @@ export function MultipleChoiceQuiz({
   partialMessage = defaultPartialMessage,
 }: MultipleChoiceQuizProps) {
   const totalQuestions = useMemo(() => questions.length, [questions]);
-  const [answers, setAnswers] = useState<Record<string, string | null>>(
-    () =>
-      questions.reduce<Record<string, string | null>>((acc, question) => {
-        acc[question.id] = null;
-        return acc;
-      }, {}),
+  const [answers, setAnswers] = useState<Record<string, string | null>>(() =>
+    questions.reduce<Record<string, string | null>>((acc, question) => {
+      acc[question.id] = null;
+      return acc;
+    }, {})
   );
   const [submitted, setSubmitted] = useState(false);
   const [score, setScore] = useState(0);
 
   const handleSelect = (questionId: string, optionId: string) => {
-    setAnswers((prev) => ({ ...prev, [questionId]: optionId }));
+    setAnswers(prev => ({ ...prev, [questionId]: optionId }));
   };
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     let currentScore = 0;
-    questions.forEach((question) => {
+    questions.forEach(question => {
       if (answers[question.id] === question.correctOptionId) {
         currentScore += 1;
       }
@@ -65,7 +64,7 @@ export function MultipleChoiceQuiz({
       questions.reduce<Record<string, string | null>>((acc, question) => {
         acc[question.id] = null;
         return acc;
-      }, {}),
+      }, {})
     );
     setScore(0);
     setSubmitted(false);
@@ -79,13 +78,15 @@ export function MultipleChoiceQuiz({
       </header>
 
       <form onSubmit={handleSubmit} className="mt-8 space-y-8">
-        {questions.map((question) => {
+        {questions.map(question => {
           const selectedOption = answers[question.id];
           return (
             <fieldset key={question.id} className="space-y-4">
-              <legend className="text-lg font-semibold text-white">{question.prompt}</legend>
+              <legend className="text-lg font-semibold text-white">
+                {question.prompt}
+              </legend>
               <div className="space-y-3">
-                {question.options.map((option) => {
+                {question.options.map(option => {
                   const isCorrect = option.id === question.correctOptionId;
                   const isSelected = selectedOption === option.id;
                   return (
@@ -93,10 +94,19 @@ export function MultipleChoiceQuiz({
                       key={option.id}
                       className={[
                         'flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3 text-sm transition',
-                        submitted && isCorrect && 'border-emerald-400/70 bg-emerald-500/10 text-emerald-100',
-                        submitted && isSelected && !isCorrect && 'border-rose-400/70 bg-rose-500/10 text-rose-100',
-                        !submitted && isSelected && 'border-text-accent/50 bg-text-accent/10 text-text-accent',
-                        !submitted && !isSelected && 'border-text-muted/30 bg-black/40 text-text-muted hover:border-text-accent/40 hover:text-text-accent',
+                        submitted &&
+                          isCorrect &&
+                          'border-emerald-400/70 bg-emerald-500/10 text-emerald-100',
+                        submitted &&
+                          isSelected &&
+                          !isCorrect &&
+                          'border-rose-400/70 bg-rose-500/10 text-rose-100',
+                        !submitted &&
+                          isSelected &&
+                          'border-text-accent/50 bg-text-accent/10 text-text-accent',
+                        !submitted &&
+                          !isSelected &&
+                          'border-text-muted/30 bg-black/40 text-text-muted hover:border-text-accent/40 hover:text-text-accent',
                       ]
                         .filter(Boolean)
                         .join(' ')}
@@ -151,7 +161,9 @@ export function MultipleChoiceQuiz({
               : 'border-amber-300/40 bg-amber-400/10 text-amber-100',
           ].join(' ')}
         >
-          {score === totalQuestions ? successMessage : partialMessage(score, totalQuestions)}
+          {score === totalQuestions
+            ? successMessage
+            : partialMessage(score, totalQuestions)}
         </div>
       )}
     </div>

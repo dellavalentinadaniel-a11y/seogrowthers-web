@@ -10,11 +10,21 @@ const lessonId = '5';
 const quizQuestions = [
   {
     id: 'q1',
-    prompt: '1. ¿Cuál de las siguientes descripciones representa mejor la acción de la IA (AI ACTION)?',
+    prompt:
+      '1. ¿Cuál de las siguientes descripciones representa mejor la acción de la IA (AI ACTION)?',
     options: [
-      { id: 'a', label: '“El usuario ingresa una frase base y selecciona un tono”.' },
-      { id: 'b', label: '“Generar 3 variaciones de tweets optimizados para engagement”.' },
-      { id: 'c', label: '“Mostrar una lista con los tweets listos para copiar y pegar”.' },
+      {
+        id: 'a',
+        label: '“El usuario ingresa una frase base y selecciona un tono”.',
+      },
+      {
+        id: 'b',
+        label: '“Generar 3 variaciones de tweets optimizados para engagement”.',
+      },
+      {
+        id: 'c',
+        label: '“Mostrar una lista con los tweets listos para copiar y pegar”.',
+      },
     ],
     correctOptionId: 'b',
   },
@@ -22,9 +32,18 @@ const quizQuestions = [
     id: 'q2',
     prompt: '2. ¿Qué salida (OUTPUT) está mejor definida para un primer MVP?',
     options: [
-      { id: 'a', label: '“Un tablero con métricas avanzadas y reportes descargables”.' },
-      { id: 'b', label: '“Una lista de variaciones de tweets listos para copiar”.' },
-      { id: 'c', label: '“Un prompt abierto para pedir cualquier cosa a la IA”.' },
+      {
+        id: 'a',
+        label: '“Un tablero con métricas avanzadas y reportes descargables”.',
+      },
+      {
+        id: 'b',
+        label: '“Una lista de variaciones de tweets listos para copiar”.',
+      },
+      {
+        id: 'c',
+        label: '“Un prompt abierto para pedir cualquier cosa a la IA”.',
+      },
     ],
     correctOptionId: 'b',
   },
@@ -39,7 +58,8 @@ export default async function Lesson5Page() {
 
   const currentLesson = Number(lessonId);
   const prevLesson = currentLesson - 1;
-  const nextLesson = currentLesson + 1 <= lesson.totalLessons ? currentLesson + 1 : null;
+  const nextLesson =
+    currentLesson + 1 <= lesson.totalLessons ? currentLesson + 1 : null;
 
   return (
     <>

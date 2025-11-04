@@ -6,22 +6,26 @@ const learningOutcomes = [
   {
     icon: 'fas fa-project-diagram',
     title: 'Mentalidad de integrador',
-    description: 'Tu enfoque estará en conectar plataformas y diseñar procesos eficientes, no en escribir código desde cero.',
+    description:
+      'Tu enfoque estará en conectar plataformas y diseñar procesos eficientes, no en escribir código desde cero.',
   },
   {
     icon: 'fas fa-dollar-sign',
     title: 'Costo de APIs',
-    description: 'Aprende a estimar y optimizar costos para que tu proyecto escale de forma sostenible.',
+    description:
+      'Aprende a estimar y optimizar costos para que tu proyecto escale de forma sostenible.',
   },
   {
     icon: 'fas fa-drafting-compass',
     title: 'Diseño funcional',
-    description: 'Construye interfaces simples y orientadas a resolver un problema real para tus usuarios.',
+    description:
+      'Construye interfaces simples y orientadas a resolver un problema real para tus usuarios.',
   },
   {
     icon: 'fas fa-brain',
     title: 'Ingeniería de prompts',
-    description: 'Domina la estructura de prompts profesionales para obtener respuestas consistentes de la IA.',
+    description:
+      'Domina la estructura de prompts profesionales para obtener respuestas consistentes de la IA.',
   },
 ];
 
@@ -31,8 +35,24 @@ const requiredTools = [
     color: 'text-emerald-300',
     label: (
       <>
-        Constructor web No-Code: <Link href="https://bubble.io" className="font-semibold text-white hover:text-text-accent" target="_blank" rel="noopener noreferrer">Bubble</Link>{' '}
-        o <Link href="https://webflow.com" className="font-semibold text-white hover:text-text-accent" target="_blank" rel="noopener noreferrer">Webflow</Link>
+        Constructor web No-Code:{' '}
+        <Link
+          href="https://bubble.io"
+          className="font-semibold text-white hover:text-text-accent"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Bubble
+        </Link>{' '}
+        o{' '}
+        <Link
+          href="https://webflow.com"
+          className="font-semibold text-white hover:text-text-accent"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Webflow
+        </Link>
       </>
     ),
   },
@@ -41,8 +61,24 @@ const requiredTools = [
     color: 'text-purple-300',
     label: (
       <>
-        Plataforma de IA: <Link href="https://openai.com" className="font-semibold text-white hover:text-text-accent" target="_blank" rel="noopener noreferrer">OpenAI</Link>{' '}
-        o <Link href="https://ai.google" className="font-semibold text-white hover:text-text-accent" target="_blank" rel="noopener noreferrer">Google AI</Link>
+        Plataforma de IA:{' '}
+        <Link
+          href="https://openai.com"
+          className="font-semibold text-white hover:text-text-accent"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          OpenAI
+        </Link>{' '}
+        o{' '}
+        <Link
+          href="https://ai.google"
+          className="font-semibold text-white hover:text-text-accent"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Google AI
+        </Link>
       </>
     ),
   },
@@ -51,8 +87,24 @@ const requiredTools = [
     color: 'text-amber-300',
     label: (
       <>
-        Conector de automatizaciones: <Link href="https://www.make.com" className="font-semibold text-white hover:text-text-accent" target="_blank" rel="noopener noreferrer">Make</Link>{' '}
-        o <Link href="https://zapier.com" className="font-semibold text-white hover:text-text-accent" target="_blank" rel="noopener noreferrer">Zapier</Link>
+        Conector de automatizaciones:{' '}
+        <Link
+          href="https://www.make.com"
+          className="font-semibold text-white hover:text-text-accent"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Make
+        </Link>{' '}
+        o{' '}
+        <Link
+          href="https://zapier.com"
+          className="font-semibold text-white hover:text-text-accent"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Zapier
+        </Link>
       </>
     ),
   },
@@ -61,7 +113,11 @@ const requiredTools = [
 const modules = [
   {
     title: 'MÓDULO 0: PREPARACIÓN',
-    lessons: ['0.1: Bienvenida y Revolución', '0.2: Cuestionario Interactivo', '0.3: Kit de Herramientas'],
+    lessons: [
+      '0.1: Bienvenida y Revolución',
+      '0.2: Cuestionario Interactivo',
+      '0.3: Kit de Herramientas',
+    ],
   },
   {
     title: 'MÓDULO 1: LA IDEA',
@@ -77,7 +133,11 @@ const modules = [
   },
   {
     title: 'MÓDULO 4: LA CONSTRUCCIÓN',
-    lessons: ['4.1: Configurando Make', '4.2: Diseñando en Bubble', '4.3: La Conexión Final'],
+    lessons: [
+      '4.1: Configurando Make',
+      '4.2: Diseñando en Bubble',
+      '4.3: La Conexión Final',
+    ],
   },
   {
     title: 'MÓDULO 5: LANZAMIENTO',
@@ -96,27 +156,39 @@ export default function CourseLandingPage() {
           </span>
         </h1>
         <p className="mt-6 text-lg text-text-muted md:text-xl">
-          Diseña una interfaz sencilla, conecta servicios punteros de IA y lanza un producto funcional usando herramientas No-Code.
+          Diseña una interfaz sencilla, conecta servicios punteros de IA y lanza
+          un producto funcional usando herramientas No-Code.
         </p>
       </header>
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-12">
         <section className="space-y-10 lg:col-span-2">
           <article className="rounded-2xl border border-card-bg bg-card-bg/80 p-8 shadow-lg shadow-black/20">
-            <h2 className="text-2xl font-semibold text-white">¿Qué aprenderás en este curso?</h2>
+            <h2 className="text-2xl font-semibold text-white">
+              ¿Qué aprenderás en este curso?
+            </h2>
             <p className="mt-4 text-text-muted">
-              Creado para emprendedores y perfiles creativos que quieren lanzar productos basados en IA sin adentrarse en código complejo.
-              Te guiaremos paso a paso para que conectes herramientas visuales con APIs potentes.
+              Creado para emprendedores y perfiles creativos que quieren lanzar
+              productos basados en IA sin adentrarse en código complejo. Te
+              guiaremos paso a paso para que conectes herramientas visuales con
+              APIs potentes.
             </p>
             <ul className="mt-8 grid gap-6 md:grid-cols-2">
-              {learningOutcomes.map((item) => (
-                <li key={item.title} className="flex items-start gap-4 rounded-xl border border-text-muted/20 bg-black/30 p-5">
+              {learningOutcomes.map(item => (
+                <li
+                  key={item.title}
+                  className="flex items-start gap-4 rounded-xl border border-text-muted/20 bg-black/30 p-5"
+                >
                   <span className="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-text-accent/20 text-text-accent">
                     <i className={`${item.icon} text-sm`} />
                   </span>
                   <div>
-                    <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                    <p className="mt-2 text-sm text-text-muted">{item.description}</p>
+                    <h3 className="text-lg font-semibold text-white">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-text-muted">
+                      {item.description}
+                    </p>
                   </div>
                 </li>
               ))}
@@ -124,15 +196,23 @@ export default function CourseLandingPage() {
           </article>
 
           <article className="rounded-2xl border border-card-bg bg-card-bg/80 p-8 shadow-lg shadow-black/20">
-            <h2 className="text-2xl font-semibold text-white">Herramientas que necesitarás</h2>
+            <h2 className="text-2xl font-semibold text-white">
+              Herramientas que necesitarás
+            </h2>
             <p className="mt-4 text-text-muted">
-              No necesitas experiencia previa en desarrollo. Solo asegúrate de contar con estas cuentas gratuitas antes de comenzar.
+              No necesitas experiencia previa en desarrollo. Solo asegúrate de
+              contar con estas cuentas gratuitas antes de comenzar.
             </p>
             <ul className="mt-6 space-y-4">
-              {requiredTools.map((tool) => (
-                <li key={tool.icon} className="flex items-start gap-3 rounded-xl border border-text-muted/20 bg-black/30 p-4">
+              {requiredTools.map(tool => (
+                <li
+                  key={tool.icon}
+                  className="flex items-start gap-3 rounded-xl border border-text-muted/20 bg-black/30 p-4"
+                >
                   <i className={`${tool.icon} mt-1 text-lg ${tool.color}`} />
-                  <span className="text-sm text-text-light/80">{tool.label}</span>
+                  <span className="text-sm text-text-light/80">
+                    {tool.label}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -143,11 +223,16 @@ export default function CourseLandingPage() {
           <div className="sticky top-24 rounded-2xl border border-card-bg bg-card-bg/80 p-6 shadow-lg shadow-black/20">
             <h2 className="text-xl font-semibold text-white">Mapa del curso</h2>
             <ul className="mt-6 space-y-5">
-              {modules.map((module) => (
-                <li key={module.title} className="rounded-xl border border-text-muted/20 bg-black/20 p-4">
-                  <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-text-muted">{module.title}</h3>
+              {modules.map(module => (
+                <li
+                  key={module.title}
+                  className="rounded-xl border border-text-muted/20 bg-black/20 p-4"
+                >
+                  <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-text-muted">
+                    {module.title}
+                  </h3>
                   <ul className="mt-3 space-y-2 text-sm text-text-light/80">
-                    {module.lessons.map((lesson) => (
+                    {module.lessons.map(lesson => (
                       <li key={lesson}>• {lesson}</li>
                     ))}
                   </ul>

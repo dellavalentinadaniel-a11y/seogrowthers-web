@@ -13,16 +13,23 @@ const quizQuestions = [
     options: [
       { id: 'a', label: 'Comprobar si la API de OpenAI funciona.' },
       { id: 'b', label: 'Presumir de la aplicación con conocidos.' },
-      { id: 'c', label: 'Evaluar si la interfaz es intuitiva para un nuevo usuario.' },
+      {
+        id: 'c',
+        label: 'Evaluar si la interfaz es intuitiva para un nuevo usuario.',
+      },
     ],
     correctOptionId: 'c',
   },
   {
     id: 'q2',
-    prompt: '2. Para que tu aplicación funcione 24/7, ¿qué debes hacer en Make?',
+    prompt:
+      '2. Para que tu aplicación funcione 24/7, ¿qué debes hacer en Make?',
     options: [
       { id: 'a', label: 'Dejar el escenario en modo “Run once”.' },
-      { id: 'b', label: 'Activar el interruptor principal del escenario a “ON”.' },
+      {
+        id: 'b',
+        label: 'Activar el interruptor principal del escenario a “ON”.',
+      },
       { id: 'c', label: 'Borrar el webhook cuando termine la prueba.' },
     ],
     correctOptionId: 'b',
@@ -48,7 +55,12 @@ export default async function Lesson11Page() {
         questions={quizQuestions}
         successMessage="¡Increíble! Cerraste el curso con mentalidad de crecimiento."
       />
-      <LessonNavigation courseSlug={courseSlug} prevLessonId={prevLesson} nextLessonId={null} nextLabel="Ver cursos" />
+      <LessonNavigation
+        courseSlug={courseSlug}
+        prevLessonId={prevLesson}
+        nextLessonId={null}
+        nextLabel="Ver cursos"
+      />
     </>
   );
 }

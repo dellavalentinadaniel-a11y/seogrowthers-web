@@ -10,7 +10,8 @@ const lessonId = '7';
 const quizQuestions = [
   {
     id: 'q1',
-    prompt: '1. La instrucción “Actúa como un chef con 3 estrellas Michelin” corresponde al pilar de...',
+    prompt:
+      '1. La instrucción “Actúa como un chef con 3 estrellas Michelin” corresponde al pilar de...',
     options: [
       { id: 'a', label: 'Rol' },
       { id: 'b', label: 'Contexto' },
@@ -24,13 +25,18 @@ const quizQuestions = [
     options: [
       { id: 'a', label: 'Para que la IA sepa en qué idioma responder.' },
       { id: 'b', label: 'Para garantizar que la respuesta sea creativa.' },
-      { id: 'c', label: 'Para recibir una respuesta estructurada y fácil de procesar para nuestra app.' },
+      {
+        id: 'c',
+        label:
+          'Para recibir una respuesta estructurada y fácil de procesar para nuestra app.',
+      },
     ],
     correctOptionId: 'c',
   },
   {
     id: 'q3',
-    prompt: '3. En nuestro prompt para “TweetSpark”, la parte “[TEMA_DEL_USUARIO]” es una variable dentro del pilar de...',
+    prompt:
+      '3. En nuestro prompt para “TweetSpark”, la parte “[TEMA_DEL_USUARIO]” es una variable dentro del pilar de...',
     options: [
       { id: 'a', label: 'Contexto' },
       { id: 'b', label: 'Instrucción' },
@@ -49,7 +55,8 @@ export default async function Lesson7Page() {
 
   const currentLesson = Number(lessonId);
   const prevLesson = currentLesson - 1;
-  const nextLesson = currentLesson + 1 <= lesson.totalLessons ? currentLesson + 1 : null;
+  const nextLesson =
+    currentLesson + 1 <= lesson.totalLessons ? currentLesson + 1 : null;
 
   return (
     <>

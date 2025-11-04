@@ -1,6 +1,6 @@
-'use client'
+'use client';
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo } from 'react';
 
 const checklistItems = [
   { id: 'bubble', label: 'Crear cuenta gratuita en Bubble' },
@@ -25,9 +25,12 @@ export function PreparationChecklist() {
 
   return (
     <div className="not-prose my-12 rounded-2xl border border-card-bg bg-card-bg/80 p-6 text-text-light shadow-lg shadow-black/20 md:p-8">
-      <h3 className="text-2xl font-semibold text-white">✅ Checklist de preparación</h3>
+      <h3 className="text-2xl font-semibold text-white">
+        ✅ Checklist de preparación
+      </h3>
       <p className="mt-2 text-text-muted">
-        Marca cada casilla para completar la configuración del kit de herramientas y desbloquear el Módulo 1.
+        Marca cada casilla para completar la configuración del kit de
+        herramientas y desbloquear el Módulo 1.
       </p>
 
       <div className="mt-6 space-y-4">
@@ -42,7 +45,9 @@ export function PreparationChecklist() {
               checked={checkedState[item.id] || false}
               onChange={() => handleCheckboxChange(item.id)}
             />
-            <span className={`text-sm ${checkedState[item.id] ? 'text-text-muted line-through' : 'text-text-light'}`}>
+            <span
+              className={`text-sm ${checkedState[item.id] ? 'text-text-muted line-through' : 'text-text-light'}`}
+            >
               {item.label}
             </span>
           </label>
@@ -51,7 +56,10 @@ export function PreparationChecklist() {
 
       {allChecked && (
         <div className="mt-8 rounded-xl border border-emerald-400/50 bg-emerald-500/10 p-4 text-center text-emerald-200">
-          <p className="text-lg font-semibold">¡Excelente! Tu kit de herramientas está listo. Puedes avanzar al Módulo 1.</p>
+          <p className="text-lg font-semibold">
+            ¡Excelente! Tu kit de herramientas está listo. Puedes avanzar al
+            Módulo 1.
+          </p>
         </div>
       )}
     </div>

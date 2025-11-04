@@ -36,8 +36,8 @@ export function getBlogPosts(): BlogPostSummary[] {
   const fileNames = fs.readdirSync(postsDirectory);
 
   const allPosts = fileNames
-    .filter((fileName) => /\.mdx?$/.test(fileName))
-    .map<BlogPostSummary>((fileName) => {
+    .filter(fileName => /\.mdx?$/.test(fileName))
+    .map<BlogPostSummary>(fileName => {
       const slug = fileName.replace(/\.mdx?$/, '');
       const fullPath = path.join(postsDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, 'utf8');
@@ -52,7 +52,9 @@ export function getBlogPosts(): BlogPostSummary[] {
   return allPosts.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-export async function getBlogPostBySlug(slug: string): Promise<BlogPostWithContent> {
+export async function getBlogPostBySlug(
+  slug: string
+): Promise<BlogPostWithContent> {
   const fullPath = path.join(postsDirectory, `${slug}.mdx`);
 
   if (!fs.existsSync(fullPath)) {

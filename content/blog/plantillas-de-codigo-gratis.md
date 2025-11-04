@@ -17,14 +17,14 @@ Acelerar el proceso de desarrollo es clave para ser más productivo. Las plantil
 
 ## ¿Dónde encontrar plantillas?
 
-*   **GitHub:** Repositorios con proyectos de código abierto.
-*   **Sitios web especializados:** Como CodePen, FreeCodeCamp, o incluso la sección de recursos de SEOGROWTHERS.
-*   **Documentación de frameworks:** A menudo incluyen ejemplos y plantillas de inicio.
+- **GitHub:** Repositorios con proyectos de código abierto.
+- **Sitios web especializados:** Como CodePen, FreeCodeCamp, o incluso la sección de recursos de SEOGROWTHERS.
+- **Documentación de frameworks:** A menudo incluyen ejemplos y plantillas de inicio.
 
 ## Tipos de plantillas
 
-*   **Snippets:** Pequeños fragmentos de código para tareas específicas (ej. un botón con efecto, un formulario de contacto).
-*   **Componentes:** Piezas de UI reutilizables (ej. un carrusel, una tarjeta de producto).
-*   **Proyectos base:** Estructuras completas para iniciar un tipo de aplicación (ej. un blog, un e-commerce).
+- **Snippets:** Pequeños fragmentos de código para tareas específicas (ej. un botón con efecto, un formulario de contacto).
+- **Componentes:** Piezas de UI reutilizables (ej. un carrusel, una tarjeta de producto).
+- **Proyectos base:** Estructuras completas para iniciar un tipo de aplicación (ej. un blog, un e-commerce).
 
 ¡No reinventes la rueda! Aprovecha la comunidad y los recursos disponibles.

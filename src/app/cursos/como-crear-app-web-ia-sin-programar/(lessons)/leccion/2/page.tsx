@@ -15,7 +15,8 @@ export default async function Lesson2Page() {
 
   const currentLesson = parseInt(lessonId, 10);
   const prevLesson = currentLesson > 1 ? currentLesson - 1 : null;
-  const nextLesson = currentLesson < lesson.totalLessons ? currentLesson + 1 : null;
+  const nextLesson =
+    currentLesson < lesson.totalLessons ? currentLesson + 1 : null;
 
   return (
     <>
@@ -25,7 +26,11 @@ export default async function Lesson2Page() {
       {/* Render the special interactive component for this lesson */}
       <CumulativeQuiz />
 
-      <LessonNavigation courseSlug={courseSlug} prevLessonId={prevLesson} nextLessonId={nextLesson} />
+      <LessonNavigation
+        courseSlug={courseSlug}
+        prevLessonId={prevLesson}
+        nextLessonId={nextLesson}
+      />
     </>
   );
 }

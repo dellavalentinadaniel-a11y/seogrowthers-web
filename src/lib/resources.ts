@@ -14,7 +14,8 @@ export const resources: Resource[] = [
     id: 'res2',
     slug: 'snippet-react-form',
     title: 'Snippet de Formulario React con Validación',
-    description: 'Código reutilizable para crear formularios React con validación básica.',
+    description:
+      'Código reutilizable para crear formularios React con validación básica.',
     type: 'snippet',
     category: 'Programación',
     url: '#', // Placeholder URL
@@ -24,7 +25,8 @@ export const resources: Resource[] = [
     id: 'res6',
     slug: 'guia-herramientas-palabras-clave',
     title: 'Guía Definitiva de Herramientas para Palabras Clave',
-    description: 'Domina el arte del Keyword Research con las mejores herramientas y un proceso paso a paso.',
+    description:
+      'Domina el arte del Keyword Research con las mejores herramientas y un proceso paso a paso.',
     type: 'guide',
     category: 'SEO',
     url: '/recursos/guia-herramientas-palabras-clave',
@@ -34,7 +36,8 @@ export const resources: Resource[] = [
     id: 'res4',
     slug: 'guia-nextjs-seo',
     title: 'Guía Definitiva de SEO para Next.js',
-    description: 'PDF descargable con las mejores prácticas de SEO para aplicaciones Next.js.',
+    description:
+      'PDF descargable con las mejores prácticas de SEO para aplicaciones Next.js.',
     type: 'download',
     category: 'Programación',
     url: '#', // Placeholder URL
@@ -44,7 +47,8 @@ export const resources: Resource[] = [
     id: 'res5',
     slug: 'checklist-auditoria-seo',
     title: 'Checklist Interactivo de Auditoría SEO',
-    description: 'Una guía detallada y accionable para llevar tu sitio web al siguiente nivel.',
+    description:
+      'Una guía detallada y accionable para llevar tu sitio web al siguiente nivel.',
     type: 'tool',
     category: 'SEO',
     url: '/recursos/checklist-auditoria-seo',

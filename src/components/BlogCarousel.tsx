@@ -25,12 +25,15 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
     <div className="relative">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex gap-6">
-          {posts.map((post) => (
+          {posts.map(post => (
             <article
               key={post.slug}
               className="min-w-[280px] flex-1 rounded-2xl border border-card-bg bg-card-bg/80 shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:border-text-accent/40"
             >
-              <Link href={`/blog/${post.slug}`} className="flex h-full flex-col">
+              <Link
+                href={`/blog/${post.slug}`}
+                className="flex h-full flex-col"
+              >
                 {post.image ? (
                   <div className="relative h-44 w-full overflow-hidden">
                     <Image
@@ -50,9 +53,15 @@ export default function BlogCarousel({ posts }: BlogCarouselProps) {
                   <div className="text-xs uppercase tracking-[0.2em] text-text-muted">
                     {post.date}
                   </div>
-                  <h3 className="text-lg font-semibold text-white">{post.title}</h3>
-                  <p className="flex-grow text-sm text-text-muted line-clamp-3">{post.description}</p>
-                  <span className="text-sm font-semibold text-text-accent">Leer más →</span>
+                  <h3 className="text-lg font-semibold text-white">
+                    {post.title}
+                  </h3>
+                  <p className="flex-grow text-sm text-text-muted line-clamp-3">
+                    {post.description}
+                  </p>
+                  <span className="text-sm font-semibold text-text-accent">
+                    Leer más →
+                  </span>
                 </div>
               </Link>
             </article>

@@ -1,6 +1,10 @@
 import { CourseProgressSidebar } from '@/components/CourseProgressSidebar';
 
-export default function CourseLayout({ children }: { children: React.ReactNode }) {
+export default function CourseLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <div className="bg-dark-bg text-text-light">
       <div className="container mx-auto px-4 py-10 sm:px-6 lg:px-8">

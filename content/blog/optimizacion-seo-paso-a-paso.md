@@ -22,20 +22,20 @@ Identifica las palabras y frases que tu público objetivo utiliza para buscar pr
 
 Asegúrate de que el contenido de tus páginas esté optimizado para tus palabras clave. Esto incluye:
 
-*   Títulos y meta descripciones.
-*   Encabezados (H1, H2, etc.).
-*   Contenido de texto.
-*   Imágenes (alt text).
-*   URLs amigables.
+- Títulos y meta descripciones.
+- Encabezados (H1, H2, etc.).
+- Contenido de texto.
+- Imágenes (alt text).
+- URLs amigables.
 
 ## 3. SEO Técnico
 
 Asegúrate de que tu sitio sea rastreable e indexable por los motores de búsqueda. Esto incluye:
 
-*   Velocidad de carga.
-*   Diseño responsivo.
-*   Estructura de enlaces internos.
-*   Sitemap y Robots.txt.
+- Velocidad de carga.
+- Diseño responsivo.
+- Estructura de enlaces internos.
+- Sitemap y Robots.txt.
 
 ## 4. Link Building (Off-Page SEO)
 

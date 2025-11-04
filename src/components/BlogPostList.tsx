@@ -9,7 +9,7 @@ interface BlogPostListProps {
 export default function BlogPostList({ posts }: BlogPostListProps) {
   return (
     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {posts.map((post) => (
+      {posts.map(post => (
         <Link
           key={post.slug}
           href={`/blog/${post.slug}`}
@@ -37,10 +37,15 @@ export default function BlogPostList({ posts }: BlogPostListProps) {
             <h2 className="text-xl font-semibold text-white group-hover:text-text-accent">
               {post.title}
             </h2>
-            <p className="flex-grow text-sm text-text-muted line-clamp-3">{post.description}</p>
+            <p className="flex-grow text-sm text-text-muted line-clamp-3">
+              {post.description}
+            </p>
             <div className="flex flex-wrap gap-2 pt-3">
-              {post.tags.map((tag) => (
-                <span key={tag} className="rounded-full bg-black/40 px-3 py-1 text-xs text-text-muted">
+              {post.tags.map(tag => (
+                <span
+                  key={tag}
+                  className="rounded-full bg-black/40 px-3 py-1 text-xs text-text-muted"
+                >
                   #{tag}
                 </span>
               ))}

@@ -9,97 +9,307 @@ id: '16'
 ---
 
 {/* Hero Section */}
+
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
   <div className="md:flex-1">
-    <h1 className="text-4xl md:text-5xl font-extrabold text-blue-400 leading-tight">Hosting: Subir Archivos, Configurar Dominio e Indexar en Google | Guía Paso a Paso</h1>
-    <p className="mt-4 text-lg text-gray-400">Una guía paso a paso para lanzar tu sitio web, desde la configuración del hosting y dominio hasta la indexación en Google.</p>
+    <h1 className="text-4xl md:text-5xl font-extrabold text-blue-400 leading-tight">
+      Hosting: Subir Archivos, Configurar Dominio e Indexar en Google | Guía
+      Paso a Paso
+    </h1>
+    <p className="mt-4 text-lg text-gray-400">
+      Una guía paso a paso para lanzar tu sitio web, desde la configuración del
+      hosting y dominio hasta la indexación en Google.
+    </p>
   </div>
   <div className="mt-6 md:mt-0">
     <div className="rounded-lg overflow-hidden shadow-2xl">
-      <Image src="/imagenes/hostinger-subir-archivos-configurar-dominio.png" alt="Panel de control de Hostinger mostrando el administrador de archivos para subir un sitio web" width={900} height={500} priority className="object-cover" />
-        </div>
-      </div>
+      <Image
+        src="/imagenes/hostinger-subir-archivos-configurar-dominio.png"
+        alt="Panel de control de Hostinger mostrando el administrador de archivos para subir un sitio web"
+        width={900}
+        height={500}
+        priority
+        className="object-cover"
+      />
     </div>
+  </div>
+</div>
 
 <nav className="my-12 p-6 bg-gray-800 rounded-xl border border-gray-700">
-  <h2 className="text-xl font-bold text-white mt-0 mb-4 flex items-center"><i className="fas fa-list-ol mr-3"></i>Contenido del Artículo</h2>
+  <h2 className="text-xl font-bold text-white mt-0 mb-4 flex items-center">
+    <i className="fas fa-list-ol mr-3"></i>Contenido del Artículo
+  </h2>
   <ol className="list-decimal ml-5 text-blue-400 space-y-2">
-    <li><a className="hover:text-blue-300 hover:underline" href="#preparacion">1. Preparación de tus Archivos Web</a></li>
-    <li><a className="hover:text-blue-300 hover:underline" href="#compra">2. Compra y Configuración de Hosting y Dominio</a></li>
     <li>
-        <a className="hover:text-blue-300 hover:underline" href="#subir">3. Subir tus Archivos al Servidor</a>
-        <ul className="list-disc ml-5 text-blue-400 space-y-1">
-            <li><a className="hover:text-blue-300 hover:underline" href="#usando-el-administrador-de-archivos-de-hostinger-recomendado-para-principiantes">A. Usando el Administrador de Archivos de Hostinger (recomendado para principiantes)</a></li>
-            <li><a className="hover:text-blue-300 hover:underline" href="#usando-un-cliente-ftp-para-usuarios-mas-avanzados">B. Usando un Cliente FTP (Para usuarios más avanzados)</a></li>
-        </ul>
+      <a className="hover:text-blue-300 hover:underline" href="#preparacion">
+        1. Preparación de tus Archivos Web
+      </a>
     </li>
-    <li><a className="hover:text-blue-300 hover:underline" href="#apuntar">4. Apuntar el Dominio al Hosting</a></li>
-    <li><a className="hover:text-blue-300 hover:underline" href="#ssl">5. Instalar Certificado SSL (Muy importante)</a></li>
-    <li><a className="hover:text-blue-300 hover:underline" href="#verificar">6. Verificar que tu Sitio Funciona</a></li>
-    <li><a className="hover:text-blue-300 hover:underline" href="#indexar">7. Indexar tu Página (SEO Básico)</a></li>
-    <li><a className="hover:text-blue-300 hover:underline" href="#considerar">8. Qué Debes Tener en Cuenta</a></li>
+    <li>
+      <a className="hover:text-blue-300 hover:underline" href="#compra">
+        2. Compra y Configuración de Hosting y Dominio
+      </a>
+    </li>
+    <li>
+      <a className="hover:text-blue-300 hover:underline" href="#subir">
+        3. Subir tus Archivos al Servidor
+      </a>
+      <ul className="list-disc ml-5 text-blue-400 space-y-1">
+        <li>
+          <a
+            className="hover:text-blue-300 hover:underline"
+            href="#usando-el-administrador-de-archivos-de-hostinger-recomendado-para-principiantes"
+          >
+            A. Usando el Administrador de Archivos de Hostinger (recomendado
+            para principiantes)
+          </a>
+        </li>
+        <li>
+          <a
+            className="hover:text-blue-300 hover:underline"
+            href="#usando-un-cliente-ftp-para-usuarios-mas-avanzados"
+          >
+            B. Usando un Cliente FTP (Para usuarios más avanzados)
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a className="hover:text-blue-300 hover:underline" href="#apuntar">
+        4. Apuntar el Dominio al Hosting
+      </a>
+    </li>
+    <li>
+      <a className="hover:text-blue-300 hover:underline" href="#ssl">
+        5. Instalar Certificado SSL (Muy importante)
+      </a>
+    </li>
+    <li>
+      <a className="hover:text-blue-300 hover:underline" href="#verificar">
+        6. Verificar que tu Sitio Funciona
+      </a>
+    </li>
+    <li>
+      <a className="hover:text-blue-300 hover:underline" href="#indexar">
+        7. Indexar tu Página (SEO Básico)
+      </a>
+    </li>
+    <li>
+      <a className="hover:text-blue-300 hover:underline" href="#considerar">
+        8. Qué Debes Tener en Cuenta
+      </a>
+    </li>
   </ol>
 </nav>
 
-
-
-<h2 id="preparacion" className="text-3xl font-bold flex items-center"><i className="fas fa-folder-open text-sky-400"></i> 1. Preparación de tus Archivos Web</h2>
-<p>Antes de subir nada, asegúrate de que tus archivos estén listos y organizados. Todos los archivos de tu sitio web (HTML, CSS, JavaScript, imágenes, etc.) deben estar en una carpeta organizada.</p>
+<h2 id="preparacion" className="text-3xl font-bold flex items-center">
+  <i className="fas fa-folder-open text-sky-400"></i> 1. Preparación de tus
+  Archivos Web
+</h2>
+<p>
+  Antes de subir nada, asegúrate de que tus archivos estén listos y organizados.
+  Todos los archivos de tu sitio web (HTML, CSS, JavaScript, imágenes, etc.)
+  deben estar en una carpeta organizada.
+</p>
 <ul>
-    <li><strong>Organización:</strong> La página principal se debe llamar <code>index.html</code>. Este es el archivo que los servidores buscan automáticamente.</li>
-    <li><strong>Limpieza:</strong> Elimina archivos temporales o de prueba que no necesites.</li>
+  <li>
+    <strong>Organización:</strong> La página principal se debe llamar{' '}
+    <code>index.html</code>. Este es el archivo que los servidores buscan
+    automáticamente.
+  </li>
+  <li>
+    <strong>Limpieza:</strong> Elimina archivos temporales o de prueba que no
+    necesites.
+  </li>
 </ul>
 
-<h2 id="compra" className="text-3xl font-bold flex items-center"><i className="fas fa-credit-card text-sky-400"></i> 2. Compra y Configuración de Hosting y Dominio</h2>
-<p>Si aún no lo has hecho, contrata un plan de hosting en Hostinger e integra la transferencia de dominio. Elige un plan que se ajuste a tus necesidades (ej. single, premium, business) y un nombre de dominio que sea fácil de recordar (ej. <code>mi-sitio-genial.com</code>).</p>
+<h2 id="compra" className="text-3xl font-bold flex items-center">
+  <i className="fas fa-credit-card text-sky-400"></i> 2. Compra y Configuración
+  de Hosting y Dominio
+</h2>
+<p>
+  Si aún no lo has hecho, contrata un plan de hosting en Hostinger e integra la
+  transferencia de dominio. Elige un plan que se ajuste a tus necesidades (ej.
+  single, premium, business) y un nombre de dominio que sea fácil de recordar
+  (ej. <code>mi-sitio-genial.com</code>).
+</p>
 
-<h2 id="subir" className="text-3xl font-bold flex items-center"><i className="fas fa-upload text-sky-400"></i> 3. Subir tus Archivos al Servidor</h2>
+<h2 id="subir" className="text-3xl font-bold flex items-center">
+  <i className="fas fa-upload text-sky-400"></i> 3. Subir tus Archivos al
+  Servidor
+</h2>
 <p>Hay dos métodos principales:</p>
-<h3 id="usando-el-administrador-de-archivos-de-hostinger-recomendado-para-principiantes" className="text-2xl font-bold flex items-center mt-8"><i className="fas fa-server text-sky-400 mr-3"></i>A. Usando el Administrador de Archivos de Hostinger</h3>
+<h3
+  id="usando-el-administrador-de-archivos-de-hostinger-recomendado-para-principiantes"
+  className="text-2xl font-bold flex items-center mt-8"
+>
+  <i className="fas fa-server text-sky-400 mr-3"></i>A. Usando el Administrador
+  de Archivos de Hostinger
+</h3>
 <ol>
-    <li>Accede a tu panel de control de Hostinger y busca "Administrador de Archivos".</li>
-    <li>Localiza la carpeta <code>public_html</code>. La página principal de tu sitio irá aquí.</li>
-    <li>Sube tus Archivos: Puedes arrastrar y soltar, o usar el botón "Subir" para subir un archivo .zip y extraerlo directamente.</li>
+  <li>
+    Accede a tu panel de control de Hostinger y busca "Administrador de
+    Archivos".
+  </li>
+  <li>
+    Localiza la carpeta <code>public_html</code>. La página principal de tu
+    sitio irá aquí.
+  </li>
+  <li>
+    Sube tus Archivos: Puedes arrastrar y soltar, o usar el botón "Subir" para
+    subir un archivo .zip y extraerlo directamente.
+  </li>
 </ol>
 
-<h3 id="usando-un-cliente-ftp-para-usuarios-mas-avanzados" className="text-2xl font-bold flex items-center mt-8"><i className="fas fa-network-wired text-sky-400 mr-3"></i>B. Usando un Cliente FTP</h3>
-<p>Un cliente FTP como FileZilla te permite conectar directamente tu computadora al servidor para una gestión de archivos más robusta.</p>
+<h3
+  id="usando-un-cliente-ftp-para-usuarios-mas-avanzados"
+  className="text-2xl font-bold flex items-center mt-8"
+>
+  <i className="fas fa-network-wired text-sky-400 mr-3"></i>B. Usando un Cliente
+  FTP
+</h3>
+<p>
+  Un cliente FTP como FileZilla te permite conectar directamente tu computadora
+  al servidor para una gestión de archivos más robusta.
+</p>
 
-<img className="rounded-xl my-10" src="/imagenes/hostinger-subir-archivos-configurar-dominio.png" alt="Administrador de archivos de Hostinger mostrando la carpeta public_html" />
+<img
+  className="rounded-xl my-10"
+  src="/imagenes/hostinger-subir-archivos-configurar-dominio.png"
+  alt="Administrador de archivos de Hostinger mostrando la carpeta public_html"
+/>
 
-<h2 id="apuntar" className="text-3xl font-bold flex items-center"><i className="fas fa-map-signs text-sky-400"></i> 4. Apuntar el Dominio al Hosting</h2>
-<p>Si compraste tu dominio en otro proveedor, necesitarás "apuntarlo" a tu hosting de Hostinger cambiando los Nameservers. Este proceso puede tardar hasta 24 horas en propagarse por completo.</p>
+<h2 id="apuntar" className="text-3xl font-bold flex items-center">
+  <i className="fas fa-map-signs text-sky-400"></i> 4. Apuntar el Dominio al
+  Hosting
+</h2>
+<p>
+  Si compraste tu dominio en otro proveedor, necesitarás "apuntarlo" a tu
+  hosting de Hostinger cambiando los Nameservers. Este proceso puede tardar
+  hasta 24 horas en propagarse por completo.
+</p>
 
-<h2 id="ssl" className="text-3xl font-bold flex items-center"><i className="fas fa-shield-alt text-sky-400"></i> 5. Instalar Certificado SSL (Muy importante)</h2>
-<blockquote>No subestimes la importancia del Certificado SSL. No solo encripta la conexión (pasando tu sitio de HTTP a HTTPS), sino que Google lo considera un factor clave de posicionamiento. Un sitio sin SSL será marcado como "No Seguro" por los navegadores.</blockquote>
+<h2 id="ssl" className="text-3xl font-bold flex items-center">
+  <i className="fas fa-shield-alt text-sky-400"></i> 5. Instalar Certificado SSL
+  (Muy importante)
+</h2>
+<blockquote>
+  No subestimes la importancia del Certificado SSL. No solo encripta la conexión
+  (pasando tu sitio de HTTP a HTTPS), sino que Google lo considera un factor
+  clave de posicionamiento. Un sitio sin SSL será marcado como "No Seguro" por
+  los navegadores.
+</blockquote>
 
-<h2 id="verificar" className="text-3xl font-bold flex items-center"><i className="fas fa-check-circle text-sky-400"></i> 6. Verificar que tu Sitio Funciona</h2>
-<p>Una vez completados los pasos anteriores, abre tu navegador y escribe tu nombre de dominio. Tu sitio debería cargar. Si no es así, espera unas horas a que la propagación del DNS termine o revisa la configuración.</p>
+<h2 id="verificar" className="text-3xl font-bold flex items-center">
+  <i className="fas fa-check-circle text-sky-400"></i> 6. Verificar que tu Sitio
+  Funciona
+</h2>
+<p>
+  Una vez completados los pasos anteriores, abre tu navegador y escribe tu
+  nombre de dominio. Tu sitio debería cargar. Si no es así, espera unas horas a
+  que la propagación del DNS termine o revisa la configuración.
+</p>
 
-<h2 id="indexar" className="text-3xl font-bold flex items-center"><i className="fas fa-search-dollar text-sky-400"></i> 7. Indexar tu Página (SEO Básico)</h2>
+<h2 id="indexar" className="text-3xl font-bold flex items-center">
+  <i className="fas fa-search-dollar text-sky-400"></i> 7. Indexar tu Página
+  (SEO Básico)
+</h2>
 <p>Para que Google sepa que tu sitio existe, debes indexarlo:</p>
 <ol>
-    <li>Crea y verifica tu propiedad en Google Search Console.</li>
-    <li>Envía el sitemap de tu página (generalmente <code>tudominio.com/sitemap.xml</code>). Si no tienes uno, hay generadores online gratuitos.</li>
-    <li>Solicita la indexación de tu URL principal a través de la herramienta "Inspección de URLs".</li>
+  <li>Crea y verifica tu propiedad en Google Search Console.</li>
+  <li>
+    Envía el sitemap de tu página (generalmente{' '}
+    <code>tudominio.com/sitemap.xml</code>). Si no tienes uno, hay generadores
+    online gratuitos.
+  </li>
+  <li>
+    Solicita la indexación de tu URL principal a través de la herramienta
+    "Inspección de URLs".
+  </li>
 </ol>
 
-<img className="rounded-xl my-10" src="/imagenes/hostinger-indexar-sitio-google-search-console.png" alt="Panel de Google Search Console solicitando la indexación de una URL" />
+<img
+  className="rounded-xl my-10"
+  src="/imagenes/hostinger-indexar-sitio-google-search-console.png"
+  alt="Panel de Google Search Console solicitando la indexación de una URL"
+/>
 
-<h2 id="considerar" className="text-3xl font-bold flex items-center"><i className="fas fa-exclamation-triangle text-sky-400"></i> 8. Qué Debes Tener en Cuenta</h2>
+<h2 id="considerar" className="text-3xl font-bold flex items-center">
+  <i className="fas fa-exclamation-triangle text-sky-400"></i> 8. Qué Debes
+  Tener en Cuenta
+</h2>
 <div className="what-to-consider-grid my-10">
-    <div className="consider-card"><div className="card-icon"><i className="fas fa-folder-tree"></i></div><h3 className="font-bold text-white">Rutas de Archivos</h3><p className="text-sm text-gray-400 mt-2">Asegúrate de que tus rutas de archivos (a CSS, JS, imágenes) sean correctas.</p></div>
-    <div className="consider-card"><div className="card-icon"><i className="fas fa-mobile-alt"></i></div><h3 className="font-bold text-white">Responsividad</h3><p className="text-sm text-gray-400 mt-2">Usa imágenes optimizadas y asegúrate de que tu sitio se vea bien en móviles.</p></div>
-    <div className="consider-card"><div className="card-icon"><i className="fas fa-file-code"></i></div><h3 className="font-bold text-white">Archivos Ocultos</h3><p className="text-sm text-gray-400 mt-2">No borres configuraciones como <code>.htaccess</code> a menos que sepas qué hacen.</p></div>
-    <div className="consider-card"><div className="card-icon"><i className="fas fa-save"></i></div><h3 className="font-bold text-white">Copias de Seguridad</h3><p className="text-sm text-gray-400 mt-2">Siempre ten copias locales. Hostinger también ofrece backups automáticos.</p></div>
-    <div className="consider-card"><div className="card-icon"><i className="fas fa-rocket"></i></div><h3 className="font-bold text-white">Cache</h3><p className="text-sm text-gray-400 mt-2">Si no ves cambios, limpia la caché de tu navegador para ver la última versión.</p></div>
-    <div className="consider-card"><div className="card-icon"><i className="fas fa-lock"></i></div><h3 className="font-bold text-white">Seguridad</h3><p className="text-sm text-gray-400 mt-2">Optimiza imágenes y usa contraseñas seguras con tu cuenta de Hostinger.</p></div>
+  <div className="consider-card">
+    <div className="card-icon">
+      <i className="fas fa-folder-tree"></i>
+    </div>
+    <h3 className="font-bold text-white">Rutas de Archivos</h3>
+    <p className="text-sm text-gray-400 mt-2">
+      Asegúrate de que tus rutas de archivos (a CSS, JS, imágenes) sean
+      correctas.
+    </p>
+  </div>
+  <div className="consider-card">
+    <div className="card-icon">
+      <i className="fas fa-mobile-alt"></i>
+    </div>
+    <h3 className="font-bold text-white">Responsividad</h3>
+    <p className="text-sm text-gray-400 mt-2">
+      Usa imágenes optimizadas y asegúrate de que tu sitio se vea bien en
+      móviles.
+    </p>
+  </div>
+  <div className="consider-card">
+    <div className="card-icon">
+      <i className="fas fa-file-code"></i>
+    </div>
+    <h3 className="font-bold text-white">Archivos Ocultos</h3>
+    <p className="text-sm text-gray-400 mt-2">
+      No borres configuraciones como <code>.htaccess</code> a menos que sepas
+      qué hacen.
+    </p>
+  </div>
+  <div className="consider-card">
+    <div className="card-icon">
+      <i className="fas fa-save"></i>
+    </div>
+    <h3 className="font-bold text-white">Copias de Seguridad</h3>
+    <p className="text-sm text-gray-400 mt-2">
+      Siempre ten copias locales. Hostinger también ofrece backups automáticos.
+    </p>
+  </div>
+  <div className="consider-card">
+    <div className="card-icon">
+      <i className="fas fa-rocket"></i>
+    </div>
+    <h3 className="font-bold text-white">Cache</h3>
+    <p className="text-sm text-gray-400 mt-2">
+      Si no ves cambios, limpia la caché de tu navegador para ver la última
+      versión.
+    </p>
+  </div>
+  <div className="consider-card">
+    <div className="card-icon">
+      <i className="fas fa-lock"></i>
+    </div>
+    <h3 className="font-bold text-white">Seguridad</h3>
+    <p className="text-sm text-gray-400 mt-2">
+      Optimiza imágenes y usa contraseñas seguras con tu cuenta de Hostinger.
+    </p>
+  </div>
 </div>
 
 <div className="key-takeaway-card p-6 rounded-lg my-10 text-center">
-     <h3 className="!text-lg !font-bold !mt-0">Lleva tus Conocimientos al Siguiente Nivel</h3>
-    <p className="!my-2">Si te ha gustado este artículo, no te pierdas nuestros cursos.</p>
-    <a href="/cursos" className="inline-block bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors mt-4 no-underline">
-        Explorar Cursos
-    </a>
+  <h3 className="!text-lg !font-bold !mt-0">
+    Lleva tus Conocimientos al Siguiente Nivel
+  </h3>
+  <p className="!my-2">
+    Si te ha gustado este artículo, no te pierdas nuestros cursos.
+  </p>
+  <a
+    href="/cursos"
+    className="inline-block bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors mt-4 no-underline"
+  >
+    Explorar Cursos
+  </a>
 </div>

@@ -1,11 +1,11 @@
-import { getBlogPostBySlug, getBlogPosts } from "./blog-posts";
-import { Resource, getResources, getResourceBySlug } from "./resources";
-import { Course, getCourses, getCourseBySlug } from "./courses";
-import type { BlogPostSummary, BlogPostWithContent } from "./blog-posts";
+import { getBlogPostBySlug, getBlogPosts } from './blog-posts';
+import { Resource, getResources, getResourceBySlug } from './resources';
+import { Course, getCourses, getCourseBySlug } from './courses';
+import type { BlogPostSummary, BlogPostWithContent } from './blog-posts';
 
 // Simula una llamada a la API con un pequeño retraso
 const simulateApiCall = <T>(data: T): Promise<T> => {
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     setTimeout(() => {
       resolve(data);
     }, 300); // Retraso de 300ms para simular una llamada de red
@@ -17,7 +17,9 @@ export async function fetchBlogPosts(): Promise<BlogPostSummary[]> {
   return getBlogPosts();
 }
 
-export async function fetchBlogPostBySlug(slug: string): Promise<BlogPostWithContent> {
+export async function fetchBlogPostBySlug(
+  slug: string
+): Promise<BlogPostWithContent> {
   return getBlogPostBySlug(slug);
 }
 
@@ -26,7 +28,9 @@ export async function fetchResources(): Promise<Resource[]> {
   return simulateApiCall(getResources());
 }
 
-export async function fetchResourceBySlug(slug: string): Promise<Resource | undefined> {
+export async function fetchResourceBySlug(
+  slug: string
+): Promise<Resource | undefined> {
   return simulateApiCall(getResourceBySlug(slug));
 }
 

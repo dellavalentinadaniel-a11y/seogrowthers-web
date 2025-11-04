@@ -1,6 +1,7 @@
 # Despliegue con Git en Hostinger
 
 1. **Inicializa Git en el proyecto (local)**
+
    ```bash
    git init
    git add .
@@ -8,6 +9,7 @@
    ```
 
 2. **Crea un repositorio en GitHub/GitLab**. Ejemplo:
+
    ```bash
    git remote add origin git@github.com:tuusuario/seogrowthers-web.git
    git push -u origin main
@@ -28,4 +30,3 @@
 6. **Recomendaciones**
    - Añade `.gitignore` completo (node_modules, .next, logs, etc.) antes de comitear
    - Usa ramas/PR para organizar cambios
-

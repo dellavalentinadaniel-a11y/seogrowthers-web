@@ -9,7 +9,8 @@ const lessonId = '9';
 const quizQuestions = [
   {
     id: 'q1',
-    prompt: '1. ¿Qué elemento de Bubble usaremos para permitir que el usuario seleccione el tono del tweet?',
+    prompt:
+      '1. ¿Qué elemento de Bubble usaremos para permitir que el usuario seleccione el tono del tweet?',
     options: [
       { id: 'a', label: 'Button' },
       { id: 'b', label: 'Dropdown' },
@@ -31,7 +32,11 @@ const quizQuestions = [
     id: 'q3',
     prompt: '3. ¿Por qué usamos un layout de tipo “column” en la página?',
     options: [
-      { id: 'a', label: 'Para organizar los elementos en columna y facilitar el diseño responsive.' },
+      {
+        id: 'a',
+        label:
+          'Para organizar los elementos en columna y facilitar el diseño responsive.',
+      },
       { id: 'b', label: 'Para que todos los elementos tengan el mismo color.' },
       { id: 'c', label: 'Para que la página cargue más rápido.' },
     ],
@@ -48,7 +53,8 @@ export default async function Lesson9Page() {
 
   const currentLesson = Number(lessonId);
   const prevLesson = currentLesson - 1;
-  const nextLesson = currentLesson + 1 <= lesson.totalLessons ? currentLesson + 1 : null;
+  const nextLesson =
+    currentLesson + 1 <= lesson.totalLessons ? currentLesson + 1 : null;
 
   return (
     <>
@@ -59,7 +65,11 @@ export default async function Lesson9Page() {
         questions={quizQuestions}
         successMessage="¡Interfaz lista! Continuemos conectando la lógica."
       />
-      <LessonNavigation courseSlug={courseSlug} prevLessonId={prevLesson} nextLessonId={nextLesson} />
+      <LessonNavigation
+        courseSlug={courseSlug}
+        prevLessonId={prevLesson}
+        nextLessonId={nextLesson}
+      />
     </>
   );
 }

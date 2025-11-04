@@ -12,8 +12,14 @@ const quizQuestions = [
     prompt: '1. ¿Cuál es la mejor manera de pensar en tu API Key?',
     options: [
       { id: 'a', label: 'Como un nombre de usuario que se puede compartir.' },
-      { id: 'b', label: 'Como una credencial secreta y personal para acceder a la IA.' },
-      { id: 'c', label: 'Como el mensaje que envías a la IA para que lo procese.' },
+      {
+        id: 'b',
+        label: 'Como una credencial secreta y personal para acceder a la IA.',
+      },
+      {
+        id: 'c',
+        label: 'Como el mensaje que envías a la IA para que lo procese.',
+      },
     ],
     correctOptionId: 'b',
   },
@@ -29,7 +35,8 @@ const quizQuestions = [
   },
   {
     id: 'q3',
-    prompt: '3. ¿Cuántas veces puedes ver la API Key completa tras crearla en OpenAI?',
+    prompt:
+      '3. ¿Cuántas veces puedes ver la API Key completa tras crearla en OpenAI?',
     options: [
       { id: 'a', label: 'Una sola vez, justo después de crearla.' },
       { id: 'b', label: 'Siempre que lo necesites, desde el panel.' },
@@ -48,7 +55,8 @@ export default async function Lesson6Page() {
 
   const currentLesson = Number(lessonId);
   const prevLesson = currentLesson - 1;
-  const nextLesson = currentLesson + 1 <= lesson.totalLessons ? currentLesson + 1 : null;
+  const nextLesson =
+    currentLesson + 1 <= lesson.totalLessons ? currentLesson + 1 : null;
 
   return (
     <>

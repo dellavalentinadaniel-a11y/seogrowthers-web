@@ -16,11 +16,15 @@ type TaggedItem = {
   tags: string[];
 };
 
-const findRelatedItem = <T extends TaggedItem>(items: T[], currentTags: string[], currentSlug: string) =>
+const findRelatedItem = <T extends TaggedItem>(
+  items: T[],
+  currentTags: string[],
+  currentSlug: string
+) =>
   items.find(
-    (item) =>
+    item =>
       item.slug !== currentSlug &&
-      item.tags.some((tag) => currentTags.includes(tag)),
+      item.tags.some(tag => currentTags.includes(tag))
   );
 
 export default function RecommendedContent({
@@ -36,7 +40,11 @@ export default function RecommendedContent({
 
   const relatedArticle = findRelatedItem(allPosts, currentTags, currentSlug);
   const relatedCourse = findRelatedItem(allCourses, currentTags, currentSlug);
-  const relatedResource = findRelatedItem(allResources, currentTags, currentSlug);
+  const relatedResource = findRelatedItem(
+    allResources,
+    currentTags,
+    currentSlug
+  );
 
   if (!relatedArticle && !relatedCourse && !relatedResource) {
     return null;
@@ -44,7 +52,9 @@ export default function RecommendedContent({
 
   return (
     <section className="mt-12 rounded-2xl border border-card-bg bg-card-bg/80 p-6 shadow-lg shadow-black/20">
-      <h2 className="text-lg font-semibold text-white">Contenido recomendado</h2>
+      <h2 className="text-lg font-semibold text-white">
+        Contenido recomendado
+      </h2>
       <p className="mt-1 text-sm text-text-muted">
         Profundiza en temas relacionados con este artículo.
       </p>

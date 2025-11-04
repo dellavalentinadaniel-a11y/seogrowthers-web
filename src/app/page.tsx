@@ -19,7 +19,9 @@ export default function HomePage() {
             De idea a lanzamiento: productos digitales con SEO, IA y estrategia
           </h1>
           <p className="text-lg text-text-muted">
-            Recursos, cursos y proyectos guiados para emprendedores, marketers y developers que quieren validar soluciones reales sin perder tiempo en teoría.
+            Recursos, cursos y proyectos guiados para emprendedores, marketers y
+            developers que quieren validar soluciones reales sin perder tiempo
+            en teoría.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
@@ -38,9 +40,12 @@ export default function HomePage() {
         </div>
         <div className="w-full md:w-1/2">
           <div className="rounded-3xl border border-card-bg bg-card-bg/80 p-8 shadow-lg shadow-black/20">
-            <h2 className="text-xl font-semibold text-white">Checklist gratuito</h2>
+            <h2 className="text-xl font-semibold text-white">
+              Checklist gratuito
+            </h2>
             <p className="mt-2 text-sm text-text-muted">
-              Replica el flujo que usamos para auditar proyectos y preparar lanzamientos en menos de una semana.
+              Replica el flujo que usamos para auditar proyectos y preparar
+              lanzamientos en menos de una semana.
             </p>
             <Link
               href="/recursos/checklist-auditoria-seo"
@@ -54,8 +59,12 @@ export default function HomePage() {
 
       <section className="border-t border-card-bg bg-card-bg/40 py-16">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-white md:text-4xl">Cursos recomendados</h2>
-          <p className="mt-2 text-text-muted">Aprende con rutas prácticas enfocadas en resultados.</p>
+          <h2 className="text-3xl font-bold text-white md:text-4xl">
+            Cursos recomendados
+          </h2>
+          <p className="mt-2 text-text-muted">
+            Aprende con rutas prácticas enfocadas en resultados.
+          </p>
           <div className="mt-8">
             <CourseList courses={courses} />
           </div>

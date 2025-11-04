@@ -38,8 +38,12 @@ export default function SocialShareButtons({ title }: SocialShareButtonsProps) {
 
   return (
     <div className="my-12 rounded-2xl border border-card-bg bg-black/30 p-6 text-center shadow-inner shadow-black/20">
-      <h3 className="text-lg font-semibold text-white">Comparte este artículo</h3>
-      <p className="mt-1 text-sm text-text-muted">Llévalo a tus redes o comparte el enlace directo.</p>
+      <h3 className="text-lg font-semibold text-white">
+        Comparte este artículo
+      </h3>
+      <p className="mt-1 text-sm text-text-muted">
+        Llévalo a tus redes o comparte el enlace directo.
+      </p>
       <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-text-muted">
         <a
           href={socialLinks.facebook}
@@ -85,7 +89,9 @@ export default function SocialShareButtons({ title }: SocialShareButtonsProps) {
           <i className="fas fa-link fa-2x" />
         </button>
       </div>
-      {copySuccess && <p className="mt-3 text-sm text-emerald-300">¡Enlace copiado!</p>}
+      {copySuccess && (
+        <p className="mt-3 text-sm text-emerald-300">¡Enlace copiado!</p>
+      )}
     </div>
   );
 }

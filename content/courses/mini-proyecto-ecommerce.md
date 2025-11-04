@@ -15,10 +15,10 @@ En este mini-proyecto, te enseñaremos a construir un e-commerce básico utiliza
 
 ## Lo que aprenderás:
 
-*   Configuración de productos
-*   Gestión del estado del carrito
-*   Integración de pasarela de pago (simulada)
-*   Despliegue del proyecto
+- Configuración de productos
+- Gestión del estado del carrito
+- Integración de pasarela de pago (simulada)
+- Despliegue del proyecto
 
 ### Requisitos:
 

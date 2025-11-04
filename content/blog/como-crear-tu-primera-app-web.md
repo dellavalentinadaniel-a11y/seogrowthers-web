@@ -18,16 +18,16 @@ tags:
 
 Antes de sumergirte en frameworks complejos, es crucial tener una base sólida en:
 
-*   **HTML:** La estructura de tu página web.
-*   **CSS:** El estilo y diseño visual.
-*   **JavaScript:** La interactividad y lógica de tu aplicación.
+- **HTML:** La estructura de tu página web.
+- **CSS:** El estilo y diseño visual.
+- **JavaScript:** La interactividad y lógica de tu aplicación.
 
 ## 2. Elige tus Herramientas
 
 Para empezar, necesitarás un editor de código (como VS Code) y un navegador web. Para proyectos más avanzados, considera:
 
-*   **Framework Frontend:** React, Vue o Angular.
-*   **Framework Backend:** Node.js (Express), Python (Django/Flask) o Ruby on Rails.
+- **Framework Frontend:** React, Vue o Angular.
+- **Framework Backend:** Node.js (Express), Python (Django/Flask) o Ruby on Rails.
 
 ## 3. ¡Manos a la Obra!
 
